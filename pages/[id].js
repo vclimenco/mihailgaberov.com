@@ -5,7 +5,7 @@ import Link from "next/link";
 import { databaseId } from "./index.js";
 import styles from "./post.module.css";
 
-export const Text = ({ text }) => {
+export const Text = ({ text, postId }) => {
   if (!text) {
     return null;
   }
@@ -24,6 +24,7 @@ export const Text = ({ text }) => {
           underline ? styles.underline : "",
         ].join(" ")}
         style={color !== "default" ? { color } : {}}
+        key={postId}
       >
         {text.link ? <a href={text.link.url}>{text.content}</a> : text.content}
       </span>

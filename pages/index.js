@@ -33,13 +33,13 @@ export default function Home({ posts }) {
                 year: "numeric",
               }
             );
-            console.log(post.id)
+
             return (
               <li key={post.id} className={styles.post}>
-                <h3 className={styles.postTitle}>
-                  <Link href={`/${post.id}`}>
-                    <a>
-                      <Text text={post.properties.Name.title} />
+                <h3 className={styles.postTitle} key={post.id}>
+                  <Link key={post.id} href={`/${post.id}`}>
+                    <a key={post.id}>
+                      <Text text={post.properties.Name.title} postId={post.id} />
                     </a>
                   </Link>
                 </h3>
