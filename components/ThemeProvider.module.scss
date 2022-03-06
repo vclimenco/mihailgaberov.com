@@ -1,0 +1,36 @@
+.themeChanger {
+  padding: 8px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  .lightThemeButton {
+    &:hover {
+      color: orange;
+      font-weight: 600;
+    }
+
+    .lightThemeIcon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .darkThemeButton {
+    margin-left: 1rem;
+
+    &:hover {
+      color: orange;
+      font-weight: 600;
+    }
+
+    .darkThemeIcon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

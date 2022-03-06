@@ -3,12 +3,15 @@ import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
 import styles from "./index.module.scss";
+import ThemeChanger from "../components/ThemeChanger";
+
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
   return (
     <div>
+      <ThemeChanger />
       <Head>
         <title>Mihail Gaberov</title>
         <link rel="icon" href="/favicon.ico" />
