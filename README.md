@@ -17,3 +17,10 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+Don't forget to update your own .env.local file with:
+```
+NOTION_TOKEN=
+NOTION_DATABASE_ID=
+```
