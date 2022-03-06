@@ -1,6 +1,5 @@
 .themeChanger {
   padding: 8px;
-  background-color: lightgray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,10 +7,24 @@
   font-size: 1.25rem; /* 20px */
   line-height: 1.75rem; /* 28px */
 
+  button {
+    border: unset;
+    border-radius: 3px;
+  }
+
   .lightThemeButton {
+    border: 1px solid var(--pureblack);
+
     &:hover {
       color: orange;
       font-weight: 600;
+    }
+
+    &.selected {
+      color: orange;
+      font-weight: 600;
+      border-radius: 3px;
+      border: 1px solid var(--pureblack);
     }
 
     .lightThemeIcon {
@@ -22,10 +35,18 @@
 
   .darkThemeButton {
     margin-left: 1rem;
+    border: 1px solid var(--pureblack);
 
     &:hover {
       color: orange;
       font-weight: 600;
+    }
+
+    &.selected {
+      color: orange;
+      font-weight: 600;
+      border-radius: 3px;
+      border: 1px solid var(--purewhite);
     }
 
     .darkThemeIcon {
