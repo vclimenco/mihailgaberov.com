@@ -1,6 +1,7 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "mihailgaberov.com",
+  "author": "Mihail Gaberov",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
