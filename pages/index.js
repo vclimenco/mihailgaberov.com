@@ -1,9 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
 import styles from "./index.module.scss";
 import { Header } from "../components/Header";
+import { Navigation } from "../components/Navigation";
 const packageJson = require("../package.json");
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
@@ -12,13 +12,8 @@ export default function Home({ posts }) {
   return (
     <div>
       <Header />
-      <Head>
-        <title>{packageJson.author}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.container}>
-        <h2 className={styles.heading}>All Posts</h2>
+        <Navigation />
         <ol className={styles.posts}>
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
