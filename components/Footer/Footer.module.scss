@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  background: var(--footer-background);
+
+  ul {
+    list-style-type: none;
+    text-align: center;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+  }
+  .footerLinks {
+    color: deeppink;
+    font-size: 1.2em;
+  }
+
+  .footerCopyrights {
+    color: darkgray;
+    font-size: 0.875em;
+  }
+}

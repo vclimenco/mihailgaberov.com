@@ -3,14 +3,14 @@ import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
 import styles from "./index.module.scss";
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import { Navigation } from "../components/Navigation";
-const packageJson = require("../package.json");
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
   return (
-    <div>
+    <>
       <Header />
       <main className={styles.container}>
         <Navigation />
@@ -47,7 +47,8 @@ export default function Home({ posts }) {
           })}
         </ol>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
 
