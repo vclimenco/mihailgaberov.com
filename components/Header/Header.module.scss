@@ -4,13 +4,11 @@
   display: flex;
   left: 0;
   z-index: 4;
-  background: var(--header-background);
+  //background: var(--header-background);
   backdrop-filter: saturate(180%) blur(20px);
   justify-content: space-around;
-  height: 10rem;
+  //height: 10rem;
   align-items: start;
-
-
 
   .logos {
     line-height: 110%;
