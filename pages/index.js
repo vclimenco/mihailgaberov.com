@@ -13,7 +13,6 @@ export default function Home({ posts }) {
     <>
       <Header />
       <main className={styles.container}>
-        <Navigation />
         <ol className={styles.posts}>
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(

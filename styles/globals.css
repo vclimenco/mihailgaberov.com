@@ -12,6 +12,8 @@ body {
 body {
   color: var(--foreground);
   background-color: var(--background);
+  padding-top: 0;
+  padding-bottom: 5rem;
 }
 
 @media (prefers-color-scheme: dark) {
