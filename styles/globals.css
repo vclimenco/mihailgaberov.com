@@ -12,8 +12,7 @@ body {
 body {
   color: var(--foreground);
   background-color: var(--background);
-  padding-top: 0;
-  padding-bottom: 5rem;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,8 +27,18 @@ body {
   --background-alt: #a8dadc;
   --foreground: #1d3557;
   --accent: #0e8185;
-  --header-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,250,238,1) 67%, rgba(241,250,238,1) 100%);
-  --footer-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(241,250,238,1) 67%, rgba(241,250,238,1) 100%);
+  --header-background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(241, 250, 238, 1) 67%,
+    rgba(241, 250, 238, 1) 100%
+  );
+  --footer-background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(241, 250, 238, 1) 67%,
+    rgba(241, 250, 238, 1) 100%
+  );
 }
 
 .dark {
@@ -37,8 +46,18 @@ body {
   --background-alt: #457b9d;
   --foreground: #f1faee;
   --accent: #84a59d;
-  --header-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(29,53,87,1) 67%, var(--background) 100%);
-  --footer-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(29,53,87,1) 67%, rgba(168,218,220,1) 100%);
+  --header-background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(29, 53, 87, 1) 67%,
+    var(--background) 100%
+  );
+  --footer-background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(29, 53, 87, 1) 67%,
+    rgba(168, 218, 220, 1) 100%
+  );
 }
 
 * {

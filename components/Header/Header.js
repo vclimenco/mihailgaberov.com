@@ -17,7 +17,6 @@ export const Header = () => {
           <h1>{packageJson.author.toLowerCase()}</h1>
           <sub>Learning by sharing.</sub>
         </div>
-        <Navigation />
         <ThemeChanger />
       </header>
     </>

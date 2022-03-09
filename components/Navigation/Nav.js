@@ -4,7 +4,7 @@ import styles from "./Navigation.module.scss";
 export const Nav = () => (
   <nav className={styles.navigation}>
     <ActiveLink activeClassName="active" href="/">
-      <a>Blog</a>
+      <a>POSTS</a>
     </ActiveLink>
     {" | "}
     <ActiveLink activeClassName="active" href="/about">
