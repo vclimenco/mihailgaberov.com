@@ -17,20 +17,19 @@ export default function Home({ posts }) {
         <Navigation />
         <ol className={styles.posts}>
           {posts.map((post) => {
-            const date = new Date(post.last_edited_time).toLocaleString(
-              "en-US",
-              {
-                month: "short",
-                day: "2-digit",
-                year: "numeric",
-              }
-            );
+            const date = new Date(
+              post.properties.date.date.start
+            ).toLocaleString("en-US", {
+              month: "short",
+              day: "2-digit",
+              year: "numeric",
+            });
 
             return (
               <li key={post.id} className={styles.post}>
-                <h3 className={styles.postTitle} key={post.id}>
-                  <Link key={post.id} href={`/${post.id}`}>
-                    <a key={post.id}>
+                <h3 className={styles.postTitle}>
+                  <Link href={`/${post.id}`}>
+                    <a>
                       <Text
                         text={post.properties.Name.title}
                         postId={post.id}
