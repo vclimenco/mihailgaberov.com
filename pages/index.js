@@ -9,6 +9,15 @@ import { Navigation } from "../components/Navigation";
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
+  const sortedPost = () => {
+    return posts.sort((a, b) => {
+      return (
+        new Date(b.properties.date.date.start) -
+        new Date(a.properties.date.date.start)
+      );
+    });
+  };
+
   return (
     <>
       <Header />
@@ -16,7 +25,7 @@ export default function Home({ posts }) {
       <main className={styles.container}>
         <Navigation />
         <ol className={styles.posts}>
-          {posts.map((post) => {
+          {sortedPost().map((post) => {
             const date = new Date(
               post.properties.date.date.start
             ).toLocaleString("en-US", {
