@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import styles from "./Header.module.scss";
 import { ThemeChanger } from "../ThemeChanger";
-import { Navigation } from "../Navigation";
 const packageJson = require("../../package.json");
 
 export const Header = () => {

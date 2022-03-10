@@ -1,10 +1,8 @@
 import Link from "next/link";
+import { Layout } from "../components/Layout/Layout";
 import { getDatabase } from "../lib/notion";
-import { Text } from "./[id].js";
 import styles from "./index.module.scss";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import { Navigation } from "../components/Navigation";
+import { Text } from "./[id].js";
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -19,45 +17,37 @@ export default function Home({ posts }) {
   };
 
   return (
-    <>
-      <Header />
-
-      <main className={styles.container}>
-        <Navigation />
-        <ol className={styles.posts}>
-          {sortedPost().map((post) => {
-            const date = new Date(
-              post.properties.date.date.start
-            ).toLocaleString("en-US", {
+    <Layout>
+      <ol className={styles.posts}>
+        {sortedPost().map((post) => {
+          const date = new Date(post.properties.date.date.start).toLocaleString(
+            "en-US",
+            {
               month: "short",
               day: "2-digit",
               year: "numeric",
-            });
+            }
+          );
 
-            return (
-              <li key={post.id} className={styles.post}>
-                <h3 className={styles.postTitle}>
-                  <Link href={`/${post.id}`}>
-                    <a>
-                      <Text
-                        text={post.properties.Name.title}
-                        postId={post.id}
-                      />
-                    </a>
-                  </Link>
-                </h3>
-
-                <p className={styles.postDescription}>{date}</p>
+          return (
+            <li key={post.id} className={styles.post}>
+              <h3 className={styles.postTitle}>
                 <Link href={`/${post.id}`}>
-                  <a> Read post →</a>
+                  <a>
+                    <Text text={post.properties.Name.title} postId={post.id} />
+                  </a>
                 </Link>
-              </li>
-            );
-          })}
-        </ol>
-      </main>
-      <Footer />
-    </>
+              </h3>
+
+              <p className={styles.postDescription}>{date}</p>
+              <Link href={`/${post.id}`}>
+                <a> Read post →</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ol>
+    </Layout>
   );
 }
 

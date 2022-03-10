@@ -1,17 +1,6 @@
-import { Header } from "../components/Header";
-import { Navigation } from "../components/Navigation";
-import styles from "./index.module.scss";
+import { Layout } from "../components/Layout";
 
-function About() {
-  return (
-    <>
-      <Header />
-      <main className={styles.container}>
-        <Navigation />
-        content here...
-      </main>
-    </>
-  );
-}
-
+const About = () => {
+  return <Layout>About me page content here...</Layout>;
+};
 export default About;
