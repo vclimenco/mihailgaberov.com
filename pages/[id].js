@@ -4,6 +4,7 @@ import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index.js";
 import styles from "./post.module.css";
+import {Layout} from "../components/Layout";
 
 export const Text = ({ text, postId }) => {
   if (!text) {
@@ -141,7 +142,7 @@ export default function Post({ page, blocks }) {
     return <div />;
   }
   return (
-    <div>
+    <Layout>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -160,7 +161,7 @@ export default function Post({ page, blocks }) {
           </Link>
         </section>
       </article>
-    </div>
+    </Layout>
   );
 }
 
