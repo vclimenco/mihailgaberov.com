@@ -1,6 +1,8 @@
 {
   "name": "mihailgaberov.com",
   "author": "Mihail Gaberov",
+  "email": "mihail.gaberov@gmail.com",
+  "url": "https://mihailgaberov.com",
   "version": "0.1.1",
   "private": true,
   "scripts": {
