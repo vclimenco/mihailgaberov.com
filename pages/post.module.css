@@ -39,6 +39,7 @@
 .code {
   font-family: monospace;
   background-color: rgb(242, 242, 242);
+  color: royalblue;
   padding: 2px 4px;
   border-radius: 2px;
 }
