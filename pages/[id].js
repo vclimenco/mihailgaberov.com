@@ -145,7 +145,7 @@ const renderBlock = (block) => {
         return t.plain_text;
       });
       return (
-        <h1 key={"callout" + id}>
+        <h1 key={"callout" + id} className={styles.callout}>
           {value.icon.emoji}
           {fullText}
         </h1>

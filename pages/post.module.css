@@ -56,15 +56,6 @@
   border-radius: 12px;
   overflow: auto;
 }
-/*
-
-.code_block {
-  padding: 20px;
-  font-family: monospace;
-  display: flex;
-  flex-wrap: wrap;
-}
-*/
 
 .file {
   padding: 2px 4px;
@@ -79,6 +70,11 @@
   background: rgba(55, 53, 47, 0.08);
   cursor: pointer;
   border-radius: 2px;
+}
+
+h1.callout {
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 .italic {
