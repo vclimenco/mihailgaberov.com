@@ -10,15 +10,16 @@ import styles from "./post.module.css";
 import { Layout } from "../components/Layout";
 import { imageConfigDefault } from "next/dist/server/image-config";
 
-export const Text = ({ text, postId }) => {
+export const Text = ({ text }) => {
   if (!text) {
     return null;
   }
-  return text.map((value) => {
+  return text.map((value, idx) => {
     const {
       annotations: { bold, code, color, italic, strikethrough, underline },
       text,
     } = value;
+
     return (
       <span
         className={[
@@ -29,7 +30,7 @@ export const Text = ({ text, postId }) => {
           underline ? styles.underline : "",
         ].join(" ")}
         style={color !== "default" ? { color } : {}}
-        key={postId + value.plain_text}
+        key={idx}
       >
         {text.link ? <a href={text.link.url}>{text.content}</a> : text.content}
       </span>
@@ -139,12 +140,12 @@ const renderBlock = (block) => {
         </figure>
       );
     case "callout":
-      const fullText = value.text?.map((t) => {
+      const fullText = value.text?.map((t, idx) => {
         if (!t.plain_text) return "";
         return t.plain_text;
       });
       return (
-        <h1 key={id}>
+        <h1 key={"callout" + id}>
           {value.icon.emoji}
           {fullText}
         </h1>
