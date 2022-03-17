@@ -151,8 +151,6 @@ const renderBlock = (block) => {
         </h1>
       );
     case "bookmark":
-      console.log(">>> val: ", value);
-
       return (
         <div className={styles.bookmark}>
           <a href={value.url}>{value.caption[0].plain_text}</a>
