@@ -2,30 +2,38 @@ import styles from "./Footer.module.scss";
 const packageJson = require("../../package.json");
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
-  return (<footer className={styles.footer}>
-    <ul>
-      <li className={styles.footerLinks}>
-        <a
+  return (
+    <footer className={styles.footer}>
+      <ul>
+        <li className={styles.footerLinks}>
+          <a
             href="https://mobile.twitter.com/mihailgaberov"
             target="_blank"
             rel="noopener noreferrer"
-        >
-          twitter
-        </a>{' '}
-        &bull;{' '}
-        <a
+          >
+            twitter
+          </a>{" "}
+          &bull;{" "}
+          <a
             href="https://github.com/mihailgaberov"
             target="_blank"
             rel="noopener noreferrer"
-        >
-          github
-        </a>
-      </li>
-      <li className={styles.footerCopyrights}>
-        © {packageJson.author} {currentYear}. All rights reserved.
-      </li>
-    </ul>
-  </footer>);
+          >
+            github
+          </a>
+        </li>
+        <li className={styles.footerCopyrights}>
+          © {packageJson.author} {currentYear}. All rights reserved.
+        </li>
+        <li className={styles.noCookies}>
+          <img
+            src="./no-cookies-text.svg"
+            alt="I don't track you in any way, hence no cookies or jam are used here."
+          ></img>
+        </li>
+      </ul>
+    </footer>
+  );
 };
