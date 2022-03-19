@@ -8,7 +8,6 @@ import { getBlocks, getDatabase, getPage } from "../lib/notion";
 import { databaseId } from "./index.js";
 import styles from "./post.module.css";
 import { Layout } from "../components/Layout";
-import { imageConfigDefault } from "next/dist/server/image-config";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -140,7 +139,7 @@ const renderBlock = (block) => {
         </figure>
       );
     case "callout":
-      const fullText = value.text?.map((t, idx) => {
+      const fullText = value.text?.map((t) => {
         if (!t.plain_text) return "";
         return t.plain_text;
       });
