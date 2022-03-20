@@ -81,7 +81,7 @@ const renderBlock = (block) => {
     case "divider":
       return <hr key={id}/>;
     case "quote":
-      return <blockquote key={id}>{value.text[0].plain_text}</blockquote>;
+      return <blockquote className={styles.quote} key={id}>{value.text[0].plain_text}</blockquote>;
     case "code":
       return value.text?.map((t, idx) => {
         if (!t.plain_text) return "";
