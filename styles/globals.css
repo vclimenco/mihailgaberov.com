@@ -17,8 +17,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #1d3557;
-    background-color: #f1faee;
+    color: var(--foreground);
+    background-color: var(--background);
   }
 }
 
