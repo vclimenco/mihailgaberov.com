@@ -110,12 +110,12 @@ const renderBlock = (block) => {
     case "quote":
       return <blockquote key={id}>{value.text[0].plain_text}</blockquote>;
     case "code":
-      return value.text?.map((t) => {
+      return value.text?.map((t, idx) => {
         if (!t.plain_text) return "";
 
         return (
           <pre className={styles.pre}>
-            <code className={`language-${block.code.language}`} key={id}>
+            <code className={`language-${block.code.language}`} key={idx}>
               {t.plain_text}
             </code>
           </pre>
@@ -164,7 +164,7 @@ const renderBlock = (block) => {
 
 export default function Post({ page, blocks }) {
   if (!page || !blocks) {
-    return <div />;
+    return '';
   }
 
   useEffect(() => {
