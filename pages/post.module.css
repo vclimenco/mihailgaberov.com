@@ -93,11 +93,11 @@ h1.callout {
 
 .quote {
   position: relative;
-  margin: 80px auto;
-  font-size: 48px;
-  font-family: 'Glegoo', serif;
-  line-height: 56px;
-  padding-left: 40px;
+  margin: 5rem auto;
+  font-size: 2em;
+  font-family: "Glegoo", serif;
+  line-height: 3.5rem;
+  padding-left: 2.5rem;
   border-left: 2px solid var(--background-alt);
 }
 
