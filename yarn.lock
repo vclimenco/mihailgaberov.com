@@ -177,6 +177,11 @@
     "@types/node-fetch" "^2.5.10"
     node-fetch "^2.6.1"
 
+"@rive-app/canvas@1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@rive-app/canvas/-/canvas-1.0.18.tgz#f6d148a78aad52ff7385ea6c43791ca847c3ff6f"
+  integrity sha512-D2eNIf+9WchAKJKDtCpwQcIe0b31NuKdn8BH6Ii+4FYRyut/awmrVITJre2px8B58lnTGxg+rSr95E99VcbgWg==
+
 "@types/node-fetch@^2.5.10":
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.6.1.tgz#8f127c50481db65886800ef496f20bbf15518975"
@@ -1573,6 +1578,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rive-react@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/rive-react/-/rive-react-0.0.31.tgz#e13df9f244066e88272055033fbd14de9416c856"
+  integrity sha512-icImFq2pWEe+LJlnFFRNeghmJvNgdP9UH8epPQTwOEVv8r5HdxJ1olRHtafeX1iLJbunvLQRoEmsh9htss45NA==
+  dependencies:
+    "@rive-app/canvas" "1.0.18"
 
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.0, safe-buffer@~5.2.0:
   version "5.2.1"
