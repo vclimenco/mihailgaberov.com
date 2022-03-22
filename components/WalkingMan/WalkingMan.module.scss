@@ -1,6 +1,6 @@
 .walkingMan {
   position: relative;
-  top: 150px;
-  width: 100%;
-  height: 100px;
+  height: fit-content;
+  z-index: 2;
+  top: 3rem;
 }

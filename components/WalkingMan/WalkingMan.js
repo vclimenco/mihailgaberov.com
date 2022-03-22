@@ -1,4 +1,10 @@
-import { useStateMachineInput, useRive } from "rive-react";
+import {
+  useStateMachineInput,
+  useRive,
+  Layout,
+  Fit,
+  Alignment,
+} from "rive-react";
 import styles from "./WalkingMan.module.scss";
 
 const STATE_MACHINE_NAME = "SM_Walking_Man";
@@ -9,6 +15,11 @@ export const WalkingMan = () => {
     src: "walking-man.riv",
     stateMachines: STATE_MACHINE_NAME,
     autoplay: true,
+    artboard: "New Artboard",
+    layout: new Layout({
+      fit: Fit.Cover,
+      alignment: Alignment.CenterLeft,
+    }),
   });
 
   const crossScreenInput = useStateMachineInput(

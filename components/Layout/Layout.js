@@ -7,8 +7,8 @@ import { WalkingMan } from "../WalkingMan";
 export const Layout = ({ children }) => {
   return (
     <>
-      <Header />
       <WalkingMan />
+      <Header />
       <main className={styles.container}>
         <Navigation />
         {children}
