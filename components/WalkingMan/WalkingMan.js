@@ -1,10 +1,11 @@
 import {
-  useStateMachineInput,
-  useRive,
-  Layout,
-  Fit,
   Alignment,
+  Fit,
+  Layout,
+  useRive,
+  useStateMachineInput,
 } from "rive-react";
+import useTimeout from "../../hooks/useTimeout.hook";
 import styles from "./WalkingMan.module.scss";
 
 const STATE_MACHINE_NAME = "SM_Walking_Man";
@@ -28,9 +29,17 @@ export const WalkingMan = () => {
     INPUT_CROSS_SCREEN
   );
 
+  useTimeout(() => {
+    console.log("I fire every second!");
+
+    if (crossScreenInput) {
+      crossScreenInput.fire();
+    }
+  }, 1000);
+
   return (
     <div className={styles.walkingMan}>
-      <RiveComponent onClick={() => crossScreenInput.fire()} />
+      <RiveComponent />
     </div>
   );
 };
