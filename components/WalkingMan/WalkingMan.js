@@ -13,7 +13,7 @@ const INPUT_CROSS_SCREEN = "Cross the screen";
 
 export const WalkingMan = () => {
   const { rive, RiveComponent } = useRive({
-    src: "walking-man.riv",
+    src: "walking_man.riv",
     stateMachines: STATE_MACHINE_NAME,
     autoplay: true,
     artboard: "New Artboard",
