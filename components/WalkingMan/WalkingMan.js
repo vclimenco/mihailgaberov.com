@@ -18,7 +18,7 @@ export const WalkingMan = () => {
     autoplay: true,
     artboard: "New Artboard",
     layout: new Layout({
-      fit: Fit.Cover,
+      fit: Fit.FitWidth,
       alignment: Alignment.CenterLeft,
     }),
   });
@@ -30,8 +30,6 @@ export const WalkingMan = () => {
   );
 
   useTimeout(() => {
-    console.log("I fire every second!");
-
     if (crossScreenInput) {
       crossScreenInput.fire();
     }
