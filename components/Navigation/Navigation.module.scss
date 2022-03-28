@@ -1,5 +1,4 @@
 .navigation {
-  border-bottom: 1px solid var(--foreground);
   text-transform: uppercase;
   position: sticky;
   top: 5rem;
@@ -7,7 +6,7 @@
   font-size: 1.735em;
   font-weight: 100;
   letter-spacing: 0.5px;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
 
   @media (prefers-color-scheme: dark) {
     .navigation {

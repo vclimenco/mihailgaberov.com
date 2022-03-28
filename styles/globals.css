@@ -31,22 +31,12 @@ body {
 }
 
 .dark {
-  --background: #1d3557;
-  --background-alt: #457b9d;
-  --foreground: #f1faee;
-  --accent: #84a59d;
-  --header-background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(29, 53, 87, 1) 67%,
-    var(--background) 100%
-  );
-  --footer-background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(29, 53, 87, 1) 67%,
-    rgba(168, 218, 220, 1) 100%
-  );
+  --background: #2a3132;
+  --background-alt: #8d8c8a;
+  --foreground: #f6f6f6;
+  --accent: #408697;
+  --header-background: #363538;
+  --footer-background: #363538;
 }
 
 * {
