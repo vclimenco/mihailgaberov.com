@@ -12,6 +12,10 @@ export const Header = () => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{packageJson.author}</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins"
+          rel="stylesheet"
+        ></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.header}>
