@@ -26,8 +26,8 @@ body {
   --background-alt: #77bfe2;
   --foreground: #fff;
   --accent: #d22d16;
-  --header-background: #e67235;
-  --footer-background: #e67235;
+  --header-background: #ffe88c;
+  --footer-background: #fff;
 }
 
 .dark {
