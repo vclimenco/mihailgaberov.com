@@ -4,8 +4,8 @@
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  font-size: 1.25rem; /* 20px */
-  line-height: 1.75rem; /* 28px */
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 
   button {
     border: unset;
@@ -24,12 +24,12 @@
       color: orange;
       font-weight: 600;
       border-radius: 3px;
-      border: 1px solid var(--pureblack);
+      border: 1px solid var(--purewhite);
     }
 
     .lightThemeIcon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
@@ -50,8 +50,8 @@
     }
 
     .darkThemeIcon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 }
