@@ -31,12 +31,12 @@ body {
 }
 
 .dark {
-  --background: #2a3132;
+  --background: #021c1e;
   --background-alt: #8d8c8a;
   --foreground: #f6f6f6;
   --accent: #408697;
-  --header-background: #363538;
-  --footer-background: #363538;
+  --header-background: #004445;
+  --footer-background: #004445;
 }
 
 * {
