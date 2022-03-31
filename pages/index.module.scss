@@ -1,7 +1,7 @@
 .container {
   padding: 0 2rem;
   max-width: var(--siteWidth);
-  margin: 7rem auto 0 auto;
+  margin: 11rem auto 0 auto;
 }
 
 .plus {
@@ -11,12 +11,12 @@
 
 .posts {
   list-style: none;
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
 }
 
 .post {
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
 .postTitle {
