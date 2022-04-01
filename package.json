@@ -3,7 +3,7 @@
   "author": "Mihail Gaberov",
   "email": "mihail.gaberov@gmail.com",
   "url": "https://mihailgaberov.com",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
