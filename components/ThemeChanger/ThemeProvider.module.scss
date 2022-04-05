@@ -30,6 +30,11 @@
     .lightThemeIcon {
       width: 3.5rem;
       height: 3.5rem;
+
+      @media only screen and (min-width: 400px) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 
@@ -52,6 +57,11 @@
     .darkThemeIcon {
       width: 3.5rem;
       height: 3.5rem;
+
+      @media only screen and (min-width: 400px) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 }
