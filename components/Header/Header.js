@@ -16,6 +16,11 @@ export const Header = () => {
           href="https://fonts.googleapis.com/css2?family=Poppins"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://fonts.googleapis.com/css?family=Glegoo"
+          rel="stylesheet"
+        ></link>
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.header}>
