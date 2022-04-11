@@ -25,6 +25,10 @@
     > :hover:not(sub) {
       text-decoration: underline;
     }
+
+    span {
+      position: relative;
+    }
   }
 
   p {

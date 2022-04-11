@@ -26,7 +26,9 @@ export const Header = () => {
       <header className={styles.header}>
         <Link href="/">
           <div className={styles.logos}>
-            <h1>mihail ✍🏻 gaberov</h1>
+            <h1>
+              mihail <span>✍🏻</span> gaberov
+            </h1>
             <sub>Learning by sharing.</sub>
           </div>
         </Link>
