@@ -28,10 +28,9 @@ export const Footer = () => {
           © {packageJson.author} {currentYear}. All rights reserved.
         </li>
         <li className={styles.noCookies}>
-          <img
-            src="./no-cookies-text.svg"
-            alt="I don't track you in any way, hence no cookies or jam are used here."
-          ></img>
+          <sub>
+            I don't track you in any way, hence no cookies or jam are used here.
+          </sub>
         </li>
       </ul>
     </footer>

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15rem;
+  padding: 5rem 2rem;
   background: var(--footer-background);
 
   ul {
@@ -23,8 +23,6 @@
   }
 
   .noCookies {
-    img {
-      width: 100%;
-    }
+    color: var(--accent);
   }
 }
