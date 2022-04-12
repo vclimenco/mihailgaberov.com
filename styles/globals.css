@@ -30,6 +30,7 @@ body {
   --header-foreground: hsl(278, 54%, 45%);
   --header-background: hsl(75, 100%, 45%);
   --footer-background: var(--purewhite);
+  --logo-emoji-opacity: 1;
 }
 
 .dark {
@@ -40,6 +41,7 @@ body {
   --header-foreground: var(--purewhite);
   --header-background: hsla(181, 100%, 14%, 0.5);
   --footer-background: hsl(181, 100%, 14%);
+  --logo-emoji-opacity: 0.5;
 }
 
 h1 {
