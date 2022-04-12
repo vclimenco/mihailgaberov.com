@@ -2,6 +2,7 @@ html,
 body {
   --purewhite: hsl(0, 0%, 100%);
   --pureblack: hsl(0, 0%, 0%);
+  --neutralgrey: hsl(0, 0%, 66%);
   padding: 0;
   margin: 0;
   --siteWidth: 83ch;
