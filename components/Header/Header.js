@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -7,6 +7,31 @@ import { ThemeChanger } from "../ThemeChanger";
 const packageJson = require("../../package.json");
 
 export const Header = () => {
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 400px)");
+    window.addEventListener("scroll", () => shrinkHeader(mediaQuery), false);
+
+    return () => {
+      window.removeEventListener("scroll", () => shrinkHeader(mediaQuery));
+    };
+  }, []);
+
+  const shrinkHeader = (mediaQuery) => {
+    const DISTANCE_FROM_TOP = 140;
+    const headerElement = document.querySelector("header");
+    const scrollY =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (scrollY > DISTANCE_FROM_TOP) {
+      if (mediaQuery.matches) {
+        headerElement.style.padding = "0 0 3.4rem 0";
+      } else {
+        headerElement.style.padding = "0 0 2.4rem 0";
+      }
+    } else {
+      headerElement.style.padding = "2rem 0";
+    }
+  };
+
   return (
     <>
       <Head>
