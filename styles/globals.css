@@ -27,7 +27,7 @@ body {
   --background-alt: hsl(200, 65%, 68%);
   --foreground: var(--purewhite);
   --accent: hsl(345, 100%, 25%);
-  --header-background: hsl(48, 100%, 77%);
+  --header-background: hsla(199, 65%, 52%, 0.5);
   --footer-background: var(--purewhite);
 }
 
@@ -36,7 +36,7 @@ body {
   --background-alt: hsl(40, 1%, 55%);
   --foreground: hsl(0, 0%, 96%);
   --accent: hsl(192, 40%, 42%);
-  --header-background: hsl(181, 100%, 14%);
+  --header-background: hsla(181, 100%, 14%, 0.5);
   --footer-background: hsl(181, 100%, 14%);
 }
 

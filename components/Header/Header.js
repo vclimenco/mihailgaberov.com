@@ -22,13 +22,18 @@ export const Header = () => {
     const scrollY =
       document.body.scrollTop || document.documentElement.scrollTop;
     if (scrollY > DISTANCE_FROM_TOP) {
+      headerElement.style.transition = "padding 200ms ease-in";
       if (mediaQuery.matches) {
-        headerElement.style.padding = "0 0 3.4rem 0";
+        headerElement.style.padding = "0 0 5rem 0";
       } else {
         headerElement.style.padding = "0 0 2.4rem 0";
       }
     } else {
-      headerElement.style.padding = "2rem 0";
+      if (mediaQuery.matches) {
+        headerElement.style.padding = "3rem 0";
+      } else {
+        headerElement.style.padding = "2rem 0";
+      }
     }
   };
 
