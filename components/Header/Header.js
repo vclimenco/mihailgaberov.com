@@ -19,16 +19,22 @@ export const Header = () => {
   const shrinkHeader = (mediaQuery) => {
     const DISTANCE_FROM_TOP = 140;
     const headerElement = document.querySelector("header");
+    const navElements = document.querySelectorAll("nav :not(a.active)");
     const scrollY =
       document.body.scrollTop || document.documentElement.scrollTop;
     if (scrollY > DISTANCE_FROM_TOP) {
+      // Change the color of all navigation links that are not active
+      navElements.forEach((el) => (el.style.color = "var(--background)"));
+
       headerElement.style.transition = "padding 200ms ease-in";
+
       if (mediaQuery.matches) {
         headerElement.style.padding = "0 0 5rem 0";
       } else {
         headerElement.style.padding = "0 0 2.4rem 0";
       }
     } else {
+      navElements.forEach((el) => (el.style.color = "var(--accent)"));
       if (mediaQuery.matches) {
         headerElement.style.padding = "3rem 0";
       } else {

@@ -23,11 +23,12 @@ body {
 }
 
 .light {
-  --background: hsl(199, 65%, 52%);
+  --background: hsl(278, 54%, 45%);
   --background-alt: hsl(200, 65%, 68%);
   --foreground: var(--purewhite);
-  --accent: hsl(345, 100%, 25%);
-  --header-background: hsla(13, 65%, 52%, 0.5);
+  --accent: hsl(75, 100%, 45%);
+  --header-foreground: hsl(278, 54%, 45%);
+  --header-background: hsl(75, 100%, 45%);
   --footer-background: var(--purewhite);
 }
 
@@ -36,6 +37,7 @@ body {
   --background-alt: hsl(40, 1%, 55%);
   --foreground: hsl(0, 0%, 96%);
   --accent: hsl(192, 40%, 42%);
+  --header-foreground: var(--purewhite);
   --header-background: hsla(181, 100%, 14%, 0.5);
   --footer-background: hsl(181, 100%, 14%);
 }
