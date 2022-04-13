@@ -5,7 +5,6 @@ import styles from "./post.module.css";
 const About = () => {
   return (
     <Layout>
-      <h1>About Me</h1>
       <p>
         There is one phrase I really like and it describes me and my way of
         thinking very well.
