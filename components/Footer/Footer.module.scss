@@ -4,6 +4,7 @@
   justify-content: center;
   padding: 5rem 2rem;
   background: var(--footer-background);
+  color: deeppink;
 
   ul {
     list-style-type: none;
@@ -13,8 +14,10 @@
     padding: 0;
   }
   .footerLinks {
-    color: deeppink;
-    font-size: 1.2em;
+    a {
+      color: var(--footer-foreground);
+      font-size: 1.2em;
+    }
   }
 
   .footerCopyrights {

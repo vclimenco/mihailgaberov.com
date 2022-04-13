@@ -24,14 +24,16 @@ export const Header = () => {
       document.body.scrollTop || document.documentElement.scrollTop;
     if (scrollY > DISTANCE_FROM_TOP) {
       // Change the color of all navigation links that are not active
-      navElements.forEach((el) => (el.style.color = "var(--background)"));
+      navElements.forEach(
+        (el) => (el.style.color = "var(--footer-foreground)")
+      );
 
       headerElement.style.transition = "padding 200ms ease-in";
 
       if (mediaQuery.matches) {
         headerElement.style.padding = "0 0 5rem 0";
       } else {
-        headerElement.style.padding = "0 0 2.4rem 0";
+        headerElement.style.padding = "0 0 2.5rem 0";
       }
     } else {
       navElements.forEach((el) => (el.style.color = "var(--accent)"));
