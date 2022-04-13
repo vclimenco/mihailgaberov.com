@@ -28,7 +28,9 @@
 
     span {
       position: relative;
-      opacity: var(--logo-emoji-opacity);
+      &:before {
+        content: var(--logo-emoji);
+      }
     }
   }
 

@@ -63,7 +63,7 @@ export const Header = () => {
         <Link href="/">
           <div className={styles.logos}>
             <h1>
-              mihail <span>✍🏻</span> gaberov
+              mihail <span></span> gaberov
             </h1>
             <sub>Learning by sharing.</sub>
           </div>
