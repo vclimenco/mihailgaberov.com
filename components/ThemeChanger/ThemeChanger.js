@@ -1,75 +1,40 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import styles from "./ThemeProvider.module.scss";
+
 export const ThemeChanger = () => {
   const LIGHT_THEME = "light";
   const DARK_THEME = "dark";
   const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const [ariaLabel, setAriaLabel] = useState('auto');
+
   const { theme, setTheme } = useTheme();
+
+  // TODO: Use localStorage to save preferences
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    // sync with system changes
+    // Sync with system changes
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", ({ matches: isDark }) => {
+        setIsDark(theme === DARK_THEME);
         setTheme(theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME);
       });
   }, []);
 
   if (!mounted) return null;
 
-  // const storageKey = "theme-preference";
 
-  // const onClick = () => {
-  //   // flip current value
-  //   theme.value = theme.value === "light" ? "dark" : "light";
-
-  //   setPreference();
-  // };
-
-  /* const getColorPreference = () => {
-    if (localStorage.getItem(storageKey))
-      return localStorage.getItem(storageKey);
-    else
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }; */
-
-  /* const setPreference = () => {
-    localStorage.setItem(storageKey, theme.value);
-    reflectPreference();
-  }; */
-
-  /*  const reflectPreference = () => {
-    document.firstElementChild.setAttribute("data-theme", theme.value);
-
-    document
-      .querySelector("#theme-toggle")
-      ?.setAttribute("aria-label", theme.value);
-  };
-
-  const theme = {
-    value: getColorPreference(),
-  }; */
-
-  // set early so no page flashes / CSS is made aware
-  // reflectPreference();
-
-  /*  window.onload = () => {
-    // set on load so screen readers can see latest value on the button
-    reflectPreference();
-
-    // now this script can find and listen for clicks on the control
-    document.querySelector("#theme-toggle").addEventListener("click", onClick);
-  }; */
 
   const handleClick = () => {
     const setToTheme = theme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
     document.firstElementChild.setAttribute("data-theme", setToTheme);
     setTheme(setToTheme);
+    setIsDark(setToTheme === DARK_THEME);
+    setAriaLabel(setToTheme)
   };
 
   return (
@@ -78,7 +43,7 @@ export const ThemeChanger = () => {
         onClick={handleClick}
         className={styles.themeToggle}
         title="Toggles light & dark"
-        aria-label="auto"
+        aria-label={ariaLabel}
         aria-live="polite"
       >
         <svg

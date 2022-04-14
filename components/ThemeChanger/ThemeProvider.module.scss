@@ -1,7 +1,5 @@
 @import "https://unpkg.com/open-props/easings.min.css";
 
-@custom-media --motionOK (prefers-reduced-motion: no-preference);
-
 .themeChanger {
   .svgImage {
     & > :is(.moon, .sun, .sunBeams) {
@@ -11,7 +9,7 @@
     & > :is(.moon, .sun) {
       fill: var(--icon-fill);
 
-      .themeToggle:is(:hover, :focus-visible) > & {
+      &.theme-toggle:is(:hover, :focus-visible) > & {
         fill: var(--icon-fill-hover);
       }
     }
@@ -20,7 +18,7 @@
       stroke: var(--icon-fill);
       stroke-width: 2px;
 
-      .themeToggle:is(:hover, :focus-visible) & {
+      &.theme-toggle:is(:hover, :focus-visible) & {
         stroke: var(--icon-fill-hover);
       }
     }
@@ -43,6 +41,8 @@
         }
       }
     }
+
+    @custom-media --motionOK (prefers-reduced-motion: no-preference);
 
     @media (--motionOK) {
       & > .sun {
