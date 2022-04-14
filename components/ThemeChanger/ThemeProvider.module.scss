@@ -1,68 +1,120 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
+@custom-media --motionOK (prefers-reduced-motion: no-preference);
+
 .themeChanger {
-  padding: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  .svgImage {
+    & > :is(.moon, .sun, .sunBeams) {
+      transform-origin: center center;
+    }
 
-  button {
-    border: unset;
-    border-radius: 3px;
+    & > :is(.moon, .sun) {
+      fill: var(--icon-fill);
+
+      .themeToggle:is(:hover, :focus-visible) > & {
+        fill: var(--icon-fill-hover);
+      }
+    }
+
+    & > .sunBeams {
+      stroke: var(--icon-fill);
+      stroke-width: 2px;
+
+      .themeToggle:is(:hover, :focus-visible) & {
+        stroke: var(--icon-fill-hover);
+      }
+    }
+
+    [data-theme="dark"] & {
+      & > .sun {
+        transform: scale(1.75);
+      }
+
+      & > .sunBeams {
+        opacity: 0;
+      }
+
+      & > .moon > circle {
+        transform: translateX(-7px);
+
+        @supports (cx: 1) {
+          transform: translateX(0);
+          cx: 17;
+        }
+      }
+    }
+
+    @media (--motionOK) {
+      & > .sun {
+        transition: transform 0.5s var(--ease-elastic-3);
+      }
+
+      & > .sunBeams {
+        transition: transform 0.5s var(--ease-elastic-4),
+          opacity 0.5s var(--ease-3);
+      }
+
+      & .moon > circle {
+        transition: transform 0.25s var(--ease-out-5);
+
+        @supports (cx: 1) {
+          transition: cx 0.25s var(--ease-out-5);
+        }
+      }
+
+      [data-theme="dark"] & {
+        & > .sun {
+          transform: scale(1.75);
+          transition-timing-function: var(--ease-3);
+          transition-duration: 0.25s;
+        }
+
+        & > .sunBeams {
+          transform: rotateZ(-25deg);
+          transition-duration: 0.15s;
+        }
+
+        & > .moon > circle {
+          transition-delay: 0.25s;
+          transition-duration: 0.5s;
+        }
+      }
+    }
+  }
+
+  .themeToggle {
+    --size: 2rem;
+    --icon-fill: hsl(210 10% 30%);
+    --icon-fill-hover: hsl(210 10% 15%);
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    inline-size: var(--size);
+    block-size: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
     cursor: pointer;
-  }
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 
-  .lightThemeButton {
-    border: 1px solid var(--pureblack);
+    outline-offset: 5px;
 
-    &:hover {
-      color: orange;
-      font-weight: 600;
+    & > svg {
+      inline-size: 100%;
+      block-size: 100%;
+      stroke-linecap: round;
     }
 
-    &.selected {
-      color: orange;
-      font-weight: 600;
-      border-radius: 3px;
-      border: 1px solid var(--purewhite);
+    [data-theme="dark"] & {
+      --icon-fill: hsl(210 10% 70%);
+      --icon-fill-hover: hsl(210 15% 90%);
     }
 
-    .lightThemeIcon {
-      width: 3.5rem;
-      height: 3.5rem;
-
-      @media only screen and (min-width: 400px) {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-    }
-  }
-
-  .darkThemeButton {
-    margin-left: 1rem;
-    border: 1px solid var(--pureblack);
-
-    &:hover {
-      color: orange;
-      font-weight: 600;
-    }
-
-    &.selected {
-      color: orange;
-      font-weight: 600;
-      border-radius: 3px;
-      border: 1px solid var(--purewhite);
-    }
-
-    .darkThemeIcon {
-      width: 3.5rem;
-      height: 3.5rem;
-
-      @media only screen and (min-width: 400px) {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
+    @media (hover: none) {
+      --size: 48px;
     }
   }
 }
