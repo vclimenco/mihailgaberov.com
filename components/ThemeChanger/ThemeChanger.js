@@ -22,6 +22,7 @@ export const ThemeChanger = () => {
         // Change the toggle icons based on this data attribute
         document.firstElementChild.setAttribute("data-theme", matches ? DARK_THEME : LIGHT_THEME);
       });
+    document.firstElementChild.setAttribute("data-theme", theme);
   }, []);
 
   if (!mounted) return null;
