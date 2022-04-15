@@ -1,67 +1,137 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+@custom-media --motionOK (prefers-reduced-motion: no-preference);
+
 .themeChanger {
-  padding: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  .themeToggle {
+    --size: 2rem;
+    --icon-fill: hsl(210 10% 30%);
+    --icon-fill-hover: hsl(210 10% 15%);
 
-  button {
-    border: unset;
-    border-radius: 3px;
+    background: none;
+    border: none;
+    padding: 0;
+
+    inline-size: var(--size);
+    block-size: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
     cursor: pointer;
-  }
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 
-  .lightThemeButton {
-    border: 1px solid var(--pureblack);
+    outline-offset: 5px;
+
+    & > svg {
+      inline-size: 100%;
+      block-size: 100%;
+      stroke-linecap: round;
+    }
+
+    [data-theme="dark"] & {
+      --icon-fill: hsl(210 10% 70%);
+      --icon-fill-hover: hsl(210 15% 90%);
+    }
+
+    @media (hover: none) {
+      --size: 48px;
+    }
 
     &:hover {
-      color: orange;
-      font-weight: 600;
-    }
+      & > .svgImage > .sun {
+        fill: var(--icon-fill-hover);
+      }
 
-    &.selected {
-      color: orange;
-      font-weight: 600;
-      border-radius: 3px;
-      border: 1px solid var(--purewhite);
-    }
+      & > .svgImage > .moon {
+        fill: var(--icon-fill-hover);
+      }
 
-    .lightThemeIcon {
-      width: 3.5rem;
-      height: 3.5rem;
-
-      @media only screen and (min-width: 400px) {
-        width: 1.5rem;
-        height: 1.5rem;
+      & > .svgImage > .sunBeams {
+        stroke: var(--icon-fill-hover);
       }
     }
-  }
 
-  .darkThemeButton {
-    margin-left: 1rem;
-    border: 1px solid var(--pureblack);
+    &:focus-visible {
+      & > .svgImage > .sun {
+        fill: var(--icon-fill-hover);
+      }
 
-    &:hover {
-      color: orange;
-      font-weight: 600;
+      & > .svgImage > .moon {
+        fill: var(--icon-fill-hover);
+      }
+
+      & > .svgImage > .sunBeams {
+        stroke: var(--icon-fill-hover);
+      }
     }
 
-    &.selected {
-      color: orange;
-      font-weight: 600;
-      border-radius: 3px;
-      border: 1px solid var(--purewhite);
+    .svgImage {
+      & > :is(.moon, .sun, .sunBeams) {
+        transform-origin: center center;
+      }
+
+      & > :is(.moon, .sun) {
+        fill: var(--icon-fill);
+      }
+
+      & > .sunBeams {
+        stroke: var(--icon-fill);
+        stroke-width: 2px;
+      }
+
+      [data-theme="dark"] & {
+        & > .sun {
+          transform: scale(1.75);
+        }
+
+        & > .sunBeams {
+          opacity: 0;
+        }
+
+        & > .moon > circle {
+          transform: translateX(-7px);
+
+          @supports (cx: 1) {
+            transform: translateX(0);
+            cx: 17;
+          }
+        }
+      }
     }
 
-    .darkThemeIcon {
-      width: 3.5rem;
-      height: 3.5rem;
+    @media (--motionOK) {
+      & > .svgImage > .sun {
+        transition: transform .5s var(--ease-elastic-3);
+      }
 
-      @media only screen and (min-width: 400px) {
-        width: 1.5rem;
-        height: 1.5rem;
+      & > .svgImage > .sunBeams {
+        transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
+      }
+
+      & .svgImage > .moon > circle {
+        transition: transform .25s var(--ease-out-5);
+
+        @supports (cx: 1) {
+          transition: cx .25s var(--ease-out-5);
+        }
+      }
+
+      [data-theme="dark"] & {
+        & > .svgImage > .sun {
+          transform: scale(1.75);
+          transition-timing-function: var(--ease-3);
+          transition-duration: .25s;
+        }
+
+        & > .svgImage >  .sunBeams {
+          transform: rotateZ(-25deg);
+          transition-duration: .15s;
+        }
+
+        & > .svgImage > .moon > circle {
+          transition-delay: .25s;
+          transition-duration: .5s;
+        }
       }
     }
   }

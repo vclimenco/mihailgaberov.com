@@ -3,55 +3,75 @@ import { useTheme } from "next-themes";
 import styles from "./ThemeProvider.module.scss";
 
 export const ThemeChanger = () => {
+  const LIGHT_THEME = "light";
+  const DARK_THEME = "dark";
   const [mounted, setMounted] = useState(false);
+  const [ariaLabel, setAriaLabel] = useState('auto');
+
   const { theme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
+  useEffect(() => {
+    // Sync with system changes
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", ({ matches }) => {
+        setTheme(matches ? DARK_THEME : LIGHT_THEME);
+
+        // Change the toggle icons based on this data attribute
+        document.firstElementChild.setAttribute("data-theme", matches ? DARK_THEME : LIGHT_THEME);
+      });
+  }, []);
+
   if (!mounted) return null;
+
+
+  const handleClick = () => {
+    const setToTheme = theme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
+    document.firstElementChild.setAttribute("data-theme", setToTheme);
+    setTheme(setToTheme);
+    setAriaLabel(setToTheme)
+  };
 
   return (
     <div className={styles.themeChanger}>
       <button
-        className={`${styles.lightThemeButton} ${
-          theme === "light" ? styles.selected : ""
-        }`}
-        onClick={() => setTheme("light")}
+        onClick={handleClick}
+        className={styles.themeToggle}
+        title="Toggles light & dark"
+        aria-label={ariaLabel}
+        aria-live="polite"
       >
         <svg
-          className={styles.lightThemeIcon}
-          fill="none"
-          stroke="currentColor"
+          className={styles.svgImage}
+          aria-hidden="true"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          <mask className={styles.moon} id="moon-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+            <circle cx="24" cy="10" r="6" fill="black" />
+          </mask>
+          <circle
+            className={styles.sun}
+            cx="12"
+            cy="12"
+            r="6"
+            mask="url(#moon-mask)"
+            fill="currentColor"
           />
-        </svg>
-      </button>
-      <button
-        className={`${styles.darkThemeButton} ${
-          theme === "dark" ? styles.selected : ""
-        }`}
-        onClick={() => setTheme("dark")}
-      >
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          id="moon"
-          className={styles.darkThemeIcon}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-          ></path>
+          <g className={styles.sunBeams} stroke="currentColor">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
         </svg>
       </button>
     </div>
