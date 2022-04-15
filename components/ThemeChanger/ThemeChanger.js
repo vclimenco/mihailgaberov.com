@@ -6,12 +6,9 @@ export const ThemeChanger = () => {
   const LIGHT_THEME = "light";
   const DARK_THEME = "dark";
   const [mounted, setMounted] = useState(false);
-  const [isDark, setIsDark] = useState(false);
   const [ariaLabel, setAriaLabel] = useState('auto');
 
   const { theme, setTheme } = useTheme();
-
-  // TODO: Use localStorage to save preferences
 
   useEffect(() => setMounted(true), []);
 
@@ -19,21 +16,21 @@ export const ThemeChanger = () => {
     // Sync with system changes
     window
       .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", ({ matches: isDark }) => {
-        setIsDark(theme === DARK_THEME);
-        setTheme(theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME);
+      .addEventListener("change", ({ matches }) => {
+        setTheme(matches ? DARK_THEME : LIGHT_THEME);
+
+        // Change the toggle icons based on this data attribute
+        document.firstElementChild.setAttribute("data-theme", matches ? DARK_THEME : LIGHT_THEME);
       });
   }, []);
 
   if (!mounted) return null;
 
 
-
   const handleClick = () => {
     const setToTheme = theme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
     document.firstElementChild.setAttribute("data-theme", setToTheme);
     setTheme(setToTheme);
-    setIsDark(setToTheme === DARK_THEME);
     setAriaLabel(setToTheme)
   };
 
