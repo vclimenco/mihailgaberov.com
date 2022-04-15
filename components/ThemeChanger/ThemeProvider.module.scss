@@ -1,87 +1,7 @@
 @import "https://unpkg.com/open-props/easings.min.css";
+@custom-media --motionOK (prefers-reduced-motion: no-preference);
 
 .themeChanger {
-  .svgImage {
-    & > :is(.moon, .sun, .sunBeams) {
-      transform-origin: center center;
-    }
-
-    & > :is(.moon, .sun) {
-      fill: var(--icon-fill);
-
-      &.theme-toggle:is(:hover, :focus-visible) > & {
-        fill: var(--icon-fill-hover);
-      }
-    }
-
-    & > .sunBeams {
-      stroke: var(--icon-fill);
-      stroke-width: 2px;
-
-      &.theme-toggle:is(:hover, :focus-visible) & {
-        stroke: var(--icon-fill-hover);
-      }
-    }
-
-    [data-theme="dark"] & {
-      & > .sun {
-        transform: scale(1.75);
-      }
-
-      & > .sunBeams {
-        opacity: 0;
-      }
-
-      & > .moon > circle {
-        transform: translateX(-7px);
-
-        @supports (cx: 1) {
-          transform: translateX(0);
-          cx: 17;
-        }
-      }
-    }
-
-    @custom-media --motionOK (prefers-reduced-motion: no-preference);
-
-    @media (--motionOK) {
-      & > .sun {
-        transition: transform 0.5s var(--ease-elastic-3);
-      }
-
-      & > .sunBeams {
-        transition: transform 0.5s var(--ease-elastic-4),
-          opacity 0.5s var(--ease-3);
-      }
-
-      & .moon > circle {
-        transition: transform 0.25s var(--ease-out-5);
-
-        @supports (cx: 1) {
-          transition: cx 0.25s var(--ease-out-5);
-        }
-      }
-
-      [data-theme="dark"] & {
-        & > .sun {
-          transform: scale(1.75);
-          transition-timing-function: var(--ease-3);
-          transition-duration: 0.25s;
-        }
-
-        & > .sunBeams {
-          transform: rotateZ(-25deg);
-          transition-duration: 0.15s;
-        }
-
-        & > .moon > circle {
-          transition-delay: 0.25s;
-          transition-duration: 0.5s;
-        }
-      }
-    }
-  }
-
   .themeToggle {
     --size: 2rem;
     --icon-fill: hsl(210 10% 30%);
@@ -115,6 +35,104 @@
 
     @media (hover: none) {
       --size: 48px;
+    }
+
+    &:hover {
+      & > .svgImage > .sun {
+        fill: var(--icon-fill-hover);
+      }
+
+      & > .svgImage > .moon {
+        fill: var(--icon-fill-hover);
+      }
+
+      & > .svgImage > .sunBeams {
+        stroke: var(--icon-fill-hover);
+      }
+    }
+
+    &:focus-visible {
+      & > .svgImage > .sun {
+        fill: var(--icon-fill-hover);
+      }
+
+      & > .svgImage > .moon {
+        fill: var(--icon-fill-hover);
+      }
+
+      & > .svgImage > .sunBeams {
+        stroke: var(--icon-fill-hover);
+      }
+    }
+
+    .svgImage {
+      & > :is(.moon, .sun, .sunBeams) {
+        transform-origin: center center;
+      }
+
+      & > :is(.moon, .sun) {
+        fill: var(--icon-fill);
+      }
+
+      & > .sunBeams {
+        stroke: var(--icon-fill);
+        stroke-width: 2px;
+      }
+
+      [data-theme="dark"] & {
+        & > .sun {
+          transform: scale(1.75);
+        }
+
+        & > .sunBeams {
+          opacity: 0;
+        }
+
+        & > .moon > circle {
+          transform: translateX(-7px);
+
+          @supports (cx: 1) {
+            transform: translateX(0);
+            cx: 17;
+          }
+        }
+      }
+    }
+
+    @media (--motionOK) {
+      & > .svgImage > .sun {
+        transition: transform .5s var(--ease-elastic-3);
+      }
+
+      & > .svgImage > .sunBeams {
+        transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
+      }
+
+      & .svgImage > .moon > circle {
+        transition: transform .25s var(--ease-out-5);
+
+        @supports (cx: 1) {
+          transition: cx .25s var(--ease-out-5);
+        }
+      }
+
+      [data-theme="dark"] & {
+        & > .svgImage > .sun {
+          transform: scale(1.75);
+          transition-timing-function: var(--ease-3);
+          transition-duration: .25s;
+        }
+
+        & > .svgImage >  .sunBeams {
+          transform: rotateZ(-25deg);
+          transition-duration: .15s;
+        }
+
+        & > .svgImage > .moon > circle {
+          transition-delay: .25s;
+          transition-duration: .5s;
+        }
+      }
     }
   }
 }
