@@ -33,15 +33,11 @@ export const Header = () => {
       if (mediaQuery.matches) {
         headerElement.style.padding = "0 0 5rem 0";
       } else {
-        headerElement.style.padding = "0 0 2.5rem 0";
+        headerElement.style.padding = "0 0 3.5rem 0";
       }
     } else {
       navElements.forEach((el) => (el.style.color = "var(--accent)"));
-      if (mediaQuery.matches) {
-        headerElement.style.padding = "3rem 0";
-      } else {
-        headerElement.style.padding = "2rem 0";
-      }
+      headerElement.style.padding = "3rem 0";
     }
   };
 
