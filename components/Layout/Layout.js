@@ -3,11 +3,40 @@ import { Navigation } from "../Navigation";
 import { Footer } from "../Footer";
 import styles from "../../pages/index.module.scss";
 import { WalkingMan } from "../WalkingMan";
+import { useEffect, useState } from "react";
+
+const SHOW_TIME_NUM = 3;
 
 export const Layout = ({ children }) => {
+  const consoleStyles = "color: #26bfa5; font: 1.2em 'Anonymous Pro', sans-serif; background-color: #222; padding: 2px";
+
+  const [show, setShow] = useState(false);
+
+  /**
+   * Generates a random number from a given interval. Min and max are included.
+   * @param min
+   * @param max
+   * @returns {number}
+   */
+  const randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  useEffect(() => {
+    const currentNum = randomIntFromInterval(1, 3); // pick a number from 1 to 10
+
+    if (currentNum === SHOW_TIME_NUM) {
+      console.log("%cSHOWTIME :)", consoleStyles);
+      setShow(true);
+      setTimeout(() => setShow(false), 10000);
+    } else {
+      setShow(false);
+    }
+  },[]);
+
   return (
     <>
-      <WalkingMan />
+      {show && <WalkingMan/>}
       <Header />
       <main className={styles.container}>
         <Navigation />
