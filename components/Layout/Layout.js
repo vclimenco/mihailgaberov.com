@@ -5,7 +5,7 @@ import styles from "../../pages/index.module.scss";
 import { WalkingMan } from "../WalkingMan";
 import { useEffect, useState } from "react";
 
-const SHOW_TIME_NUM = 3;
+const SHOW_TIME_NUM = 7;
 
 export const Layout = ({ children }) => {
   const consoleStyles = "color: #26bfa5; font: 1.2em 'Anonymous Pro', sans-serif; background-color: #222; padding: 2px";
@@ -23,7 +23,7 @@ export const Layout = ({ children }) => {
   }
 
   useEffect(() => {
-    const currentNum = randomIntFromInterval(1, 3); // pick a number from 1 to 10
+    const currentNum = randomIntFromInterval(1, SHOW_TIME_NUM); // pick a number from 1 to 10
 
     if (currentNum === SHOW_TIME_NUM) {
       console.log("%cSHOWTIME :)", consoleStyles);
