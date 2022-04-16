@@ -54,7 +54,7 @@ export default function Home({ posts }) {
                 </Link>
               </h3>
 
-              <p className={styles.postDescription}>{date} (last updated: {lastEditedDate}</p>
+              <p className={styles.postDescription}>{date} (last updated: {lastEditedDate})</p>
               <Link href={`/${slugify(title).toLowerCase()}`}>
                 <a> Read post →</a>
               </Link>

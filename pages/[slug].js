@@ -5,7 +5,7 @@ import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 import slugify from "slugify";
 
-import { getBlocks, getDatabase, getPage } from "../lib/notion";
+import { getBlocks, getDatabase } from "../lib/notion";
 import { databaseId } from "./index.js";
 import styles from "./post.module.css";
 import { Layout } from "../components/Layout";
@@ -176,6 +176,15 @@ export default function Post({ page, blocks }) {
     Prism.highlightAll();
   }, []);
 
+  const lastEditedDate = new Date(page.last_edited_time).toLocaleString(
+      "en-US",
+      {
+        month: "short",
+        day: "2-digit",
+        year: "numeric",
+      }
+  );
+
   return (
     <Layout>
       <Head>
@@ -187,6 +196,7 @@ export default function Post({ page, blocks }) {
         <h1 className={styles.name}>
           <Text text={page.properties.Name.title} />
         </h1>
+        <p className={styles.figcaption}>Last updated: <strong>{lastEditedDate}</strong></p>
         <section>
           {blocks.map((block, idx) => {
             return (
