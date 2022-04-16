@@ -9,7 +9,7 @@ const packageJson = require("../../package.json");
 
 export const Header = () => {
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 400px)");
+    const mediaQuery = window.matchMedia("(min-width: 400px) and (orientation: landscape)");
     window.addEventListener("scroll", () => shrinkHeader(mediaQuery), false);
 
     return () => {
@@ -32,13 +32,13 @@ export const Header = () => {
       headerElement.style.transition = "padding 200ms ease-in";
 
       if (mediaQuery.matches) {
-        headerElement.style.padding = "0 0 5rem 0";
+        headerElement.style.padding = "0 1rem 5rem 1rem";
       } else {
-        headerElement.style.padding = "0 0 3.5rem 0";
+        headerElement.style.padding = "0 1rem 3.5rem 1rem";
       }
     } else {
       navElements.forEach((el) => (el.style.color = "var(--accent)"));
-      headerElement.style.padding = "3rem 0";
+      headerElement.style.padding = "3rem 1rem 3rem 1rem";
     }
   };
 
