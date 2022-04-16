@@ -71,7 +71,7 @@ const About = () => {
           <h3>More about me</h3>
           <p>
             Here you can{" "}
-            <a href="./Mihail_Gaberov_Resume_Aug_2021.pdf">check out my CV</a>,
+            <a href="./Mihail_Gaberov_Resume_Apr_2022.pdf">check out my CV</a>,
             where my professional experience is described.
           </p>
           <p>
