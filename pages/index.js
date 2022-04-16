@@ -22,6 +22,7 @@ export default function Home({ posts }) {
     <Layout>
       <ol className={styles.posts}>
         {sortedPost().map((post) => {
+          console.log(post.last_edited_time)
           const date = new Date(post.properties.date.date.start).toLocaleString(
             "en-US",
             {
