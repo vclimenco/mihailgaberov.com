@@ -22,7 +22,17 @@ export default function Home({ posts }) {
     <Layout>
       <ol className={styles.posts}>
         {sortedPost().map((post) => {
-          console.log(post.last_edited_time)
+
+
+          const lastEditedDate = new Date(post.last_edited_time).toLocaleString(
+              "en-US",
+              {
+                month: "short",
+                day: "2-digit",
+                year: "numeric",
+              }
+          );
+
           const date = new Date(post.properties.date.date.start).toLocaleString(
             "en-US",
             {
@@ -44,7 +54,7 @@ export default function Home({ posts }) {
                 </Link>
               </h3>
 
-              <p className={styles.postDescription}>{date}</p>
+              <p className={styles.postDescription}>{date} (last updated: {lastEditedDate}</p>
               <Link href={`/${slugify(title).toLowerCase()}`}>
                 <a> Read post →</a>
               </Link>
