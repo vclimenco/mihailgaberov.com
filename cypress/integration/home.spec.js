@@ -3,8 +3,8 @@ describe('Home page', () => {
     cy.visit('/')
   })
 
-  it("greets logo", () => {
-    cy.contains('h2', 'mihail  gaberov')
+  it("show properly header logo", () => {
+    cy.contains('h1', 'mihail gaberov')
   })
 
   /*it("links to #/register", () => {
