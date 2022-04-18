@@ -28,4 +28,9 @@ jobs:
         cache: 'npm'
     - name: Cypress run
       uses: cypress-io/github-action@v2
-      
+      with:
+        install-command: yarn
+        start: yarn dev
+        browser: chrome
+        wait-on: 'http://localhost:3000'
+        wait-on-timeout: 240
