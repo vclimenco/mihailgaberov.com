@@ -9,6 +9,12 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+  NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+  NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+  WORKSPACE_ID: ${{ secrets.WORKSPACE_ID }}
+
 jobs:
   build:
 
@@ -16,7 +22,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,6 +32,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: yarn
-    - run: yarn build
+    - run: yarn && yarn build
     - run: yarn test

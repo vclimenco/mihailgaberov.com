@@ -1,5 +1,7 @@
 # mihailgaberov.com
 
+[![Node.js CI](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml/badge.svg)](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml)
+
 Install dependencies
 
 ```bash
@@ -14,6 +16,15 @@ Start the server with
 npm run dev
 # or
 yarn dev
+```
+
+
+Run e2e test with 
+
+```bash
+npm test
+# or
+yarn test
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
