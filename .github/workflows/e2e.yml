@@ -26,4 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: yarn && yarn build && yarn test
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      with:
+        browser: chrome
+        wait-on: 'http://localhost:3000'
+        wait-on-timeout: 240
