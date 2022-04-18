@@ -26,7 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        database-id: ${{ secrets.NOTION_DATABASE_ID }}
-        notion-api-key: ${{ secrets.NOTION_TOKEN }}
     - run: yarn && yarn build
     - run: yarn test
