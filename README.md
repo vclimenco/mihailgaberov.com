@@ -1,6 +1,6 @@
 # mihailgaberov.com
 
-[![Node.js CI](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml/badge.svg)](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml)
+[![mihailgaberov.com CI](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml/badge.svg)](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml)
 
 Install dependencies
 
