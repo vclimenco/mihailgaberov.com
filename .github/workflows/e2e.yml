@@ -28,7 +28,4 @@ jobs:
         cache: 'npm'
     - name: Cypress run
       uses: cypress-io/github-action@v2
-      with:
-        browser: chrome
-        wait-on: 'http://localhost:3000'
-        wait-on-timeout: 240
+      
