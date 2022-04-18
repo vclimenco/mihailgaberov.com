@@ -21,13 +21,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - id: narkdown-query
+      uses: narkdown/query-in-action@v0.4.0
+      with:
+          database-id: ${{ secrets.NOTION_DATABASE_ID }}
+          notion-api-key: ${{ secrets.NOTION_TOKEN }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        notion-token: ${{ secrets.NOTION_TOKEN }}
-        notion-db: ${{ secrets.NOTION_DATABASE_ID }}
     - run: yarn
     - run: yarn build
     - run: yarn test
