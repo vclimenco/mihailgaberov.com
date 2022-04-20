@@ -6,7 +6,7 @@ export const ThemeChanger = () => {
   const LIGHT_THEME = "light";
   const DARK_THEME = "dark";
   const [mounted, setMounted] = useState(false);
-  const [ariaLabel, setAriaLabel] = useState('auto');
+  const [ariaLabel, setAriaLabel] = useState("auto");
 
   const { theme, setTheme } = useTheme();
 
@@ -20,23 +20,25 @@ export const ThemeChanger = () => {
         setTheme(matches ? DARK_THEME : LIGHT_THEME);
 
         // Change the toggle icons based on this data attribute
-        document.firstElementChild.setAttribute("data-theme", matches ? DARK_THEME : LIGHT_THEME);
+        document.firstElementChild.setAttribute(
+          "data-theme",
+          matches ? DARK_THEME : LIGHT_THEME
+        );
       });
     document.firstElementChild.setAttribute("data-theme", theme);
   }, []);
 
   if (!mounted) return null;
 
-
   const handleClick = () => {
     const setToTheme = theme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
     document.firstElementChild.setAttribute("data-theme", setToTheme);
     setTheme(setToTheme);
-    setAriaLabel(setToTheme)
+    setAriaLabel(setToTheme);
   };
 
   return (
-    <div className={styles.themeChanger}>
+    <div className={styles.themeChanger} data-cy="themeSwitch">
       <button
         onClick={handleClick}
         className={styles.themeToggle}
