@@ -22,6 +22,15 @@ export const Footer = () => {
             rel="noopener noreferrer"
           >
             github
+          </a>{" "}
+          &bull;{" "}
+          <a
+            href="/rss.xml"
+            rel="alternate"
+            title="RSS feed"
+            type="application/rss+xml"
+          >
+            rss
           </a>
         </li>
         <li className={styles.footerCopyrights}>

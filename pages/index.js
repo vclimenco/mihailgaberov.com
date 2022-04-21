@@ -5,6 +5,7 @@ import { Layout } from "../components/Layout";
 import { getDatabase } from "../lib/notion";
 import styles from "./index.module.scss";
 import { Text } from "./[slug].js";
+import generateRss from "../lib/rss";
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -22,15 +23,13 @@ export default function Home({ posts }) {
     <Layout>
       <ol className={styles.posts}>
         {sortedPost().map((post) => {
-
-
           const lastEditedDate = new Date(post.last_edited_time).toLocaleString(
-              "en-US",
-              {
-                month: "short",
-                day: "2-digit",
-                year: "numeric",
-              }
+            "en-US",
+            {
+              month: "short",
+              day: "2-digit",
+              year: "numeric",
+            }
           );
 
           const date = new Date(post.properties.date.date.start).toLocaleString(
@@ -54,7 +53,9 @@ export default function Home({ posts }) {
                 </Link>
               </h3>
 
-              <p className={styles.postDescription}>{date} (last updated: {lastEditedDate})</p>
+              <p className={styles.postDescription}>
+                {date} (last updated: {lastEditedDate})
+              </p>
               <Link href={`/${slugify(title).toLowerCase()}`}>
                 <a> Read post →</a>
               </Link>
@@ -68,6 +69,8 @@ export default function Home({ posts }) {
 
 export const getStaticProps = async () => {
   const database = await getDatabase(databaseId);
+
+  generateRss(database);
 
   return {
     props: {

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mihail Gaberov</title>
+    <link>https://mihailgaberov.com</link>
+    <description>Learning by sharing.</description>
+    <language>en</language>
+    <version>1.0.0</version>
+    <atom:link href="https://mihailgaberov.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <guid>https://mihailgaberov.com/posts/63a0e4f8-3978-4a24-b449-28a555846218</guid>
+      <title>How to Automate Simple Tasks with Node.js</title>
+      <link>https://www.notion.so/How-to-Automate-Simple-Tasks-with-Node-js-63a0e4f839784a24b44928a555846218</link>
+      <tags>automation, node</tags>
+      <lastUpdatedDate>Wed, 06 Apr 2022 13:54:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/6d6f4851-a11c-4fb6-b95b-40ed855f87a8</guid>
+      <title>How to Build a SPA with Vue.js and C# Using .NET Core</title>
+      <link>https://www.notion.so/How-to-Build-a-SPA-with-Vue-js-and-C-Using-NET-Core-6d6f4851a11c4fb6b95b40ed855f87a8</link>
+      <tags>vue.js, C#, .net</tags>
+      <lastUpdatedDate>Fri, 15 Apr 2022 06:41:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/a0c05127-4665-4c9d-9c50-89e9b2fbcdbd</guid>
+      <title>How to create an air blowing effect with JavaScript</title>
+      <link>https://www.notion.so/How-to-create-an-air-blowing-effect-with-JavaScript-a0c0512746654c9d9c5089e9b2fbcdbd</link>
+      <tags>javascript, animation, blowing effect</tags>
+      <lastUpdatedDate>Sun, 20 Mar 2022 10:51:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/693e8199-0662-428d-bde7-444d25e80157</guid>
+      <title>How to run Docker on Windows 10 Home edition</title>
+      <link>https://www.notion.so/How-to-run-Docker-on-Windows-10-Home-edition-693e81990662428dbde7444d25e80157</link>
+      <tags>docker, windows</tags>
+      <lastUpdatedDate>Mon, 28 Mar 2022 14:55:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/0070a760-8ec7-4de7-819d-5bedaab219db</guid>
+      <title>How I build a desktop chat app with CometChat and NW.js (and how you can too)</title>
+      <link>https://www.notion.so/How-I-build-a-desktop-chat-app-with-CometChat-and-NW-js-and-how-you-can-too-0070a7608ec74de7819d5bedaab219db</link>
+      <tags>desktop, chat, nw.js</tags>
+      <lastUpdatedDate>Mon, 28 Mar 2022 14:53:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/c8016edb-0af0-4ade-8322-f4ff9077ee2b</guid>
+      <title>Optimize your JavaScript app by using service workers</title>
+      <link>https://www.notion.so/Optimize-your-JavaScript-app-by-using-service-workers-c8016edb0af04ade8322f4ff9077ee2b</link>
+      <tags>javascript, optimization, service workers</tags>
+      <lastUpdatedDate>Thu, 10 Mar 2022 16:32:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/ccead0f8-8b93-46f7-89c3-cfad63f4722c</guid>
+      <title>Visualize Pancakes Algorithm with React and Popmotion.io</title>
+      <link>https://www.notion.so/Visualize-Pancakes-Algorithm-with-React-and-Popmotion-io-ccead0f88b9346f789c3cfad63f4722c</link>
+      <tags>react, algorithms, animation</tags>
+      <lastUpdatedDate>Thu, 10 Mar 2022 16:31:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/d392395f-1e4d-48dc-a7f7-af76d3988efc</guid>
+      <title>How to optimize your JavaScript apps using Loops</title>
+      <link>https://www.notion.so/How-to-optimize-your-JavaScript-apps-using-Loops-d392395f1e4d48dca7f7af76d3988efc</link>
+      <tags>javascript, optimization</tags>
+      <lastUpdatedDate>Mon, 28 Mar 2022 14:49:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/36c26027-0e33-48d2-adaa-3a721f83abc9</guid>
+      <title>React Hooks: Revisited</title>
+      <link>https://www.notion.so/React-Hooks-Revisited-36c260270e3348d2adaa3a721f83abc9</link>
+      <tags>react, hooks</tags>
+      <lastUpdatedDate>Thu, 10 Mar 2022 16:28:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/04af58ea-194f-4cac-bbc0-0571843b52b9</guid>
+      <title>How to solve the Sherlock and Anagrams coding challenge in JavaScript</title>
+      <link>https://www.notion.so/How-to-solve-the-Sherlock-and-Anagrams-coding-challenge-in-JavaScript-04af58ea194f4cacbbc00571843b52b9</link>
+      <tags>javascript, algorithms, anagrams</tags>
+      <lastUpdatedDate>Sun, 13 Mar 2022 10:52:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/4c0ab6a3-e305-4be1-9535-7610f6fdf4fe</guid>
+      <title>Build a chat app with React, TypeScript and Socket.io</title>
+      <link>https://www.notion.so/Build-a-chat-app-with-React-TypeScript-and-Socket-io-4c0ab6a3e3054be195357610f6fdf4fe</link>
+      <tags>react, typescript, chat, testing, hooks</tags>
+      <lastUpdatedDate>Wed, 06 Apr 2022 06:18:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/71c92707-79f8-4d57-a720-70d5dfbdffa2</guid>
+      <title>What should we test (ReactJS Components)</title>
+      <link>https://www.notion.so/What-should-we-test-ReactJS-Components-71c9270779f84d57a72070d5dfbdffa2</link>
+      <tags>react, javascript, testing</tags>
+      <lastUpdatedDate>Thu, 10 Mar 2022 07:40:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/ae0a62a5-c931-4395-9742-dac71a65823b</guid>
+      <title>Improve your Twitter bot with MongoDB</title>
+      <link>https://www.notion.so/Improve-your-Twitter-bot-with-MongoDB-ae0a62a5c93143959742dac71a65823b</link>
+      <tags>twitter, javascript, mondodb</tags>
+      <lastUpdatedDate>Mon, 28 Mar 2022 14:46:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/a5d56f6d-d7d6-4ef3-b6b8-af8fab662750</guid>
+      <title>Creating a Twitter bot at 5am</title>
+      <link>https://www.notion.so/Creating-a-Twitter-bot-at-5am-a5d56f6dd7d64ef3b6b8af8fab662750</link>
+      <tags>twitter, websockets, javascript</tags>
+      <lastUpdatedDate>Mon, 28 Mar 2022 14:40:00 GMT</lastUpdatedDate>
+    </item>
+    <item>
+      <guid>https://mihailgaberov.com/posts/9de36174-bcab-4465-946c-9ff23f30ddda</guid>
+      <title>Build a real-time Order Book application with React and WebSockets</title>
+      <link>https://www.notion.so/Build-a-real-time-Order-Book-application-with-React-and-WebSockets-9de36174bcab4465946c9ff23f30ddda</link>
+      <tags>orderbook, react, websockets</tags>
+      <lastUpdatedDate>Wed, 20 Apr 2022 11:58:00 GMT</lastUpdatedDate>
+    </item>
+  </channel>
+</rss>
