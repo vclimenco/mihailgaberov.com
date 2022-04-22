@@ -6,23 +6,30 @@ import { getDatabase } from "../lib/notion";
 import styles from "./index.module.scss";
 import { Text } from "./[slug].js";
 import generateRss from "../lib/rss";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
+const sortedPosts = (posts) => {
+  return posts.sort((a, b) => {
+    return (
+      new Date(b.properties.date.date.start) -
+      new Date(a.properties.date.date.start)
+    );
+  });
+};
 export default function Home({ posts }) {
-  const sortedPost = () => {
-    return posts.sort((a, b) => {
-      return (
-        new Date(b.properties.date.date.start) -
-        new Date(a.properties.date.date.start)
-      );
-    });
-  };
+  const [fetchedPosts, setFetchedPosts] = useState(posts);
+
+  useEffect(() => {
+    setFetchedPosts(sortedPosts(posts));
+  }, []);
 
   return (
     <Layout>
       <ol className={styles.posts}>
-        {sortedPost().map((post) => {
+        {fetchedPosts.map((post) => {
           const lastEditedDate = new Date(post.last_edited_time).toLocaleString(
             "en-US",
             {
@@ -70,7 +77,7 @@ export default function Home({ posts }) {
 export const getStaticProps = async () => {
   const database = await getDatabase(databaseId);
 
-  generateRss(database);
+  generateRss(sortedPosts(database));
 
   return {
     props: {
