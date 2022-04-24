@@ -8,7 +8,7 @@ export const Nav = () => (
     </ActiveLink>
     {" | "}
     <ActiveLink activeClassName="active" href="/about">
-      <a>About</a>
+      <a>ABOUT</a>
     </ActiveLink>
   </nav>
 );

@@ -54,7 +54,7 @@ export default function Home({ posts }) {
             <li key={post.id} className={styles.post}>
               <h3 className={styles.postTitle}>
                 <Link href={`/${slugify(title).toLowerCase()}`}>
-                  <a>
+                  <a data-cy="postTitle">
                     <Text text={post.properties.Name.title} postId={post.id} />
                   </a>
                 </Link>
@@ -64,7 +64,7 @@ export default function Home({ posts }) {
                 {date} (last updated: {lastEditedDate})
               </p>
               <Link href={`/${slugify(title).toLowerCase()}`}>
-                <a> Read post →</a>
+                <a data-cy="readPostLink">Read post →</a>
               </Link>
             </li>
           );

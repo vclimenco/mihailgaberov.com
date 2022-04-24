@@ -22,4 +22,23 @@ describe("Home page", () => {
     cy.get("[data-cy='themeSwitch'] > button").click();
     cy.get("[data-theme='light']").should.exist;
   });
+
+  it("should show Home nav as active", () => {
+    cy.contains("a", "POSTS").should("have.class", "active");
+  });
+
+  it("should be able to open a post via clicking at its title", () => {
+    cy.get("[data-cy='postTitle']").first().click();
+    cy.wait(6000);
+    cy.url().should(
+      "include",
+      "/build-a-real-time-order-book-application-with-react-and-websockets"
+    );
+  });
+
+  it("should be able to open a post via clicking at Read Post liknk", () => {
+    cy.get("[data-cy='readPostLink']").last().click();
+    cy.wait(6000);
+    cy.url().should("include", "/creating-a-twitter-bot-at-5am");
+  });
 });
