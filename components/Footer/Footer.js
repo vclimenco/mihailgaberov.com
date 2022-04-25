@@ -5,13 +5,14 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-cy="footer">
       <ul>
         <li className={styles.footerLinks}>
           <a
             href="https://mobile.twitter.com/mihailgaberov"
             target="_blank"
             rel="noopener noreferrer"
+            data-cy="twitterLink"
           >
             twitter
           </a>{" "}
@@ -20,6 +21,7 @@ export const Footer = () => {
             href="https://github.com/mihailgaberov"
             target="_blank"
             rel="noopener noreferrer"
+            data-cy="githubLink"
           >
             github
           </a>{" "}
@@ -29,6 +31,7 @@ export const Footer = () => {
             rel="alternate"
             title="RSS feed"
             type="application/rss+xml"
+            data-cy="rssLink"
           >
             rss
           </a>
