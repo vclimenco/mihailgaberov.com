@@ -15,6 +15,12 @@ body {
   padding: 0;
 }
 
+::selection {
+  background: var(--accent);
+  color: var(--header-foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: var(--foreground);
