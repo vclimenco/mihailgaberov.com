@@ -9,7 +9,9 @@ const packageJson = require("../../package.json");
 
 export const Header = () => {
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 400px) and (orientation: landscape)");
+    const mediaQuery = window.matchMedia(
+      "(min-width: 400px) and (orientation: landscape)"
+    );
     window.addEventListener("scroll", () => shrinkHeader(mediaQuery), false);
 
     return () => {
@@ -22,11 +24,11 @@ export const Header = () => {
     const headerElement = document.querySelector("header");
     const navElements = document.querySelectorAll("nav :not(a.active)");
     const scrollY =
-        document.body.scrollTop || document.documentElement.scrollTop;
+      document.body.scrollTop || document.documentElement.scrollTop;
     if (scrollY > DISTANCE_FROM_TOP) {
       // Change the color of all navigation links that are not active
       navElements.forEach(
-          (el) => (el.style.color = "var(--footer-foreground)")
+        (el) => (el.style.color = "var(--footer-foreground)")
       );
 
       headerElement.style.transition = "padding 200ms ease-in";
@@ -43,36 +45,41 @@ export const Header = () => {
   };
 
   return (
-      <>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          <meta name="mobile-web-app-capable" content="yes"/>
-          <meta name="theme-color" content="Canvas"/>
-          <meta name="color-scheme" content="light dark"/>
-          <title>{packageJson.author}</title>
-          <link
-              href="https://fonts.googleapis.com/css2?family=Poppins"
-              rel="stylesheet"
-          ></link>
-          <link
-              href="https://fonts.googleapis.com/css?family=Glegoo"
-              rel="stylesheet"
-          ></link>
+    <>
+      <Head>
+        <meta name="description" content="Learning by sharing." />
+        <meta property="og:title" content="Mihail Gaberov" />
+        <meta property="og:description" content="Learning by sharing." />
+        <meta property="og:url" content="https://mihailgaberov.com" />
+        <meta property="og:type" content="website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="Canvas" />
+        <meta name="color-scheme" content="light dark" />
+        <title>{packageJson.author}</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css?family=Glegoo"
+          rel="stylesheet"
+        ></link>
 
-          <link rel="icon" href="/favicon.ico" sizes="any"/>
-          <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-        </Head>
-        <header className={styles.header}>
-          <Link href="/">
-            <div className={styles.logos}>
-              <h1>
-                mihail <span></span> gaberov
-              </h1>
-              <sub>Learning by sharing.</sub>
-            </div>
-          </Link>
-          <ThemeChanger/>
-        </header>
-      </>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </Head>
+      <header className={styles.header}>
+        <Link href="/">
+          <div className={styles.logos}>
+            <h1>
+              mihail <span></span> gaberov
+            </h1>
+            <sub>Learning by sharing.</sub>
+          </div>
+        </Link>
+        <ThemeChanger />
+      </header>
+    </>
   );
 };
