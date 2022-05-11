@@ -51,7 +51,10 @@ export default function Home({ posts }) {
           const title = post.properties.Name.title[0].plain_text;
 
           return (
-            <li key={post.id} className={styles.post}>
+            <li
+              key={post.id}
+              className={styles.post + " " + styles.animatedBorder}
+            >
               <h3 className={styles.postTitle}>
                 <Link href={`/${slugify(title).toLowerCase()}`}>
                   <a data-cy="postTitle">

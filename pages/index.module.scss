@@ -33,3 +33,32 @@
   margin-bottom: 12px;
   opacity: 0.65;
 }
+
+.animatedBorder {
+  padding: 55px;
+  background-image: linear-gradient(90deg, var(--foreground) 50%, transparent 0),
+    linear-gradient(90deg, var(--foreground) 50%, transparent 0),
+    linear-gradient(180deg, var(--foreground) 00 50%, transparent 0),
+    linear-gradient(180deg, var(--foreground) 50%, transparent 0);
+  background-position: 52px 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  animation: 0.4s infinite normal a;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  position: relative;
+
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes a {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+
+  to {
+    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;
+  }
+}
