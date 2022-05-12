@@ -4,8 +4,8 @@
 
 ### Screenshots
 
-![Light Theme](https://github.com/mihailgaberov/mihailgaberov.com/blob/main/public/light_theme.png)
-![Dark Theme](https://github.com/mihailgaberov/mihailgaberov.com/blob/main/public/dark_theme.png)
+![Light Theme](https://github.com/mihailgaberov/mihailgaberov.com/blob/main/public/light_theme.gif)
+![Dark Theme](https://github.com/mihailgaberov/mihailgaberov.com/blob/main/public/dark_theme.gif)
 
 Install dependencies
 
