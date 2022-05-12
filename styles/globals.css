@@ -1,3 +1,9 @@
+@property --offset {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
 html,
 body {
   --purewhite: hsl(0, 0%, 100%);
@@ -70,11 +76,6 @@ h3 {
   line-height: 1.1;
 }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
 p {
   padding: 0;
   margin: 0 0 1.08rem 0;
@@ -93,6 +94,33 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid var(--background);
 }
 
-.active {
-  color: var(--foreground);
+a {
+  color: inherit;
+  text-underline-offset: var(--offset, 0.2em);
+  text-decoration: underline 0.15em;
+  transition: --offset 400ms, text-decoration-color 400ms;
+}
+
+a:hover,
+a:focus {
+  --offset: 0.4em;
+  text-decoration-color: var(--accent);
+}
+a:active {
+  text-decoration-color: gold;
+}
+
+a.active {
+  text-decoration-color: var(--accent);
+}
+
+@supports not (background: paint(something)) {
+  a {
+    transition: text-underline-offset 400ms, text-decoration-color 400ms;
+  }
+
+  a:hover,
+  a:focus {
+    text-underline-offset: 0.4em;
+  }
 }
