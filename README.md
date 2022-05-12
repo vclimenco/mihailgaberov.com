@@ -2,7 +2,7 @@
 
 [![mihailgaberov.com CI](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml/badge.svg)](https://github.com/mihailgaberov/mihailgaberov.com/actions/workflows/e2e.yml)
 
-### Screenshots
+### Animated Preview
 
 ![Light Theme](https://github.com/mihailgaberov/mihailgaberov.com/blob/main/public/light_theme.gif)
 ![Dark Theme](https://github.com/mihailgaberov/mihailgaberov.com/blob/main/public/dark_theme.gif)
