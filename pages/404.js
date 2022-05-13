@@ -11,7 +11,7 @@ export default function Custom404() {
       </p>
       <ul>
         <li>Благодаря!</li>
-        <li> Thanks you!</li>
+        <li>Thank you!</li>
         <li>Danke!</li>
         <li>Merci!</li>
         <li>Gracias!</li>
