@@ -177,12 +177,12 @@ export default function Post({ page, blocks }) {
   }, []);
 
   const lastEditedDate = new Date(page.last_edited_time).toLocaleString(
-      "en-US",
-      {
-        month: "short",
-        day: "2-digit",
-        year: "numeric",
-      }
+    "en-US",
+    {
+      month: "short",
+      day: "2-digit",
+      year: "numeric",
+    }
   );
 
   return (
@@ -196,7 +196,9 @@ export default function Post({ page, blocks }) {
         <h1 className={styles.name}>
           <Text text={page.properties.Name.title} />
         </h1>
-        <p className={styles.figcaption}>Last updated: <strong>{lastEditedDate}</strong></p>
+        <p className={styles.figcaption}>
+          Last updated: <strong>{lastEditedDate}</strong>
+        </p>
         <section>
           {blocks.map((block, idx) => {
             return (
@@ -237,6 +239,13 @@ export const getStaticProps = async (context) => {
     const resultSlug = slugify(title).toLowerCase();
     return resultSlug === slug;
   });
+
+  if (!page) {
+    return {
+      notFound: true,
+    };
+  }
+
   const blocks = await getBlocks(page.id);
 
   // Retrieve block children for nested blocks (one level deep), for example toggle blocks
