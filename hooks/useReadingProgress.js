@@ -8,17 +8,11 @@ export function useReadingProgress() {
 
   useEffect(() => {
     function updateScrollCompletion() {
-      // see how much we have scrolled
-      const currentProgress = window.scrollY;
-
-      // see how much total scroll is available
-      const scrollHeight = document.body.scrollHeight - window.innerHeight;
-
-      if (scrollHeight) {
-        setCompletion(
-          Number((currentProgress / scrollHeight).toFixed(2)) * 100
-        );
-      }
+      const el = document.documentElement,
+        scrollTop = el.scrollTop || document.body.scrollTop,
+        scrollHeight = el.scrollHeight || document.body.scrollHeight;
+      var percent = (scrollTop / (scrollHeight - el.clientHeight)) * 100;
+      setCompletion(percent);
     }
     window.addEventListener("scroll", updateScrollCompletion);
 
