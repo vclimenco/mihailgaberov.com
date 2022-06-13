@@ -7,8 +7,10 @@ import slugify from "slugify";
 
 import { getBlocks, getDatabase } from "../lib/notion";
 import { databaseId } from "./index.js";
-import styles from "./post.module.css";
 import { Layout } from "../components/Layout";
+import { useReadingProgress } from "../hooks/useReadingProgress";
+
+import styles from "./post.module.css";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -168,6 +170,8 @@ const renderBlock = (block) => {
 };
 
 export default function Post({ page, blocks }) {
+  const completion = useReadingProgress();
+
   if (!page || !blocks) {
     return "";
   }
@@ -187,6 +191,13 @@ export default function Post({ page, blocks }) {
 
   return (
     <Layout>
+      <span
+        id="progress-bar"
+        style={{
+          transform: `translateX(${completion - 100}%)`,
+        }}
+        className={styles.progressBar}
+      />
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
