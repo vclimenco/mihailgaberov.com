@@ -4,15 +4,12 @@ import { Header } from "../Header";
 import { Navigation } from "../Navigation";
 import { Footer } from "../Footer";
 import { WalkingMan } from "../WalkingMan";
-import { useReadingProgress } from "../../hooks/useReadingProgress";
 
 import styles from "../../pages/index.module.scss";
 
 const SHOW_TIME_NUM = 7;
 
 export const Layout = ({ children }) => {
-  const completion = useReadingProgress();
-
   const consoleStyles =
     "color: #26bfa5; font: 1.2em 'Anonymous Pro', sans-serif; background-color: #222; padding: 2px";
 
@@ -43,13 +40,13 @@ export const Layout = ({ children }) => {
   return (
     <>
       {show && <WalkingMan />}
-      <span
+      {/* <span
         id="progress-bar"
         style={{
           transform: `translateX(${completion - 100}%)`,
         }}
         className={styles.progressBar}
-      />
+      /> */}
       <Header />
       <main className={styles.container}>
         <Navigation />
