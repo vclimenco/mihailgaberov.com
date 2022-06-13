@@ -111,3 +111,15 @@ h1.callout {
     background-color: rgb(15, 8, 28);
   }
 }
+
+.progressBar {
+  width: 100%;
+  transform: width;
+  background-color: var(--foreground);
+  height: 5px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}

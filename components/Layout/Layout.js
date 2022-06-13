@@ -1,14 +1,17 @@
+import { useEffect, useState } from "react";
+
 import { Header } from "../Header";
 import { Navigation } from "../Navigation";
 import { Footer } from "../Footer";
-import styles from "../../pages/index.module.scss";
 import { WalkingMan } from "../WalkingMan";
-import { useEffect, useState } from "react";
+
+import styles from "../../pages/index.module.scss";
 
 const SHOW_TIME_NUM = 7;
 
 export const Layout = ({ children }) => {
-  const consoleStyles = "color: #26bfa5; font: 1.2em 'Anonymous Pro', sans-serif; background-color: #222; padding: 2px";
+  const consoleStyles =
+    "color: #26bfa5; font: 1.2em 'Anonymous Pro', sans-serif; background-color: #222; padding: 2px";
 
   const [show, setShow] = useState(false);
 
@@ -19,8 +22,8 @@ export const Layout = ({ children }) => {
    * @returns {number}
    */
   const randomIntFromInterval = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
   useEffect(() => {
     const currentNum = randomIntFromInterval(1, SHOW_TIME_NUM); // pick a number from 1 to 10
@@ -32,11 +35,18 @@ export const Layout = ({ children }) => {
     } else {
       setShow(false);
     }
-  },[]);
+  }, []);
 
   return (
     <>
-      {show && <WalkingMan/>}
+      {show && <WalkingMan />}
+      {/* <span
+        id="progress-bar"
+        style={{
+          transform: `translateX(${completion - 100}%)`,
+        }}
+        className={styles.progressBar}
+      /> */}
       <Header />
       <main className={styles.container}>
         <Navigation />
