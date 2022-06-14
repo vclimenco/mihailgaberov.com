@@ -44,6 +44,9 @@ export const Footer = () => {
             I don't track you in any way, hence no cookies or jam are used here.
           </div>
         </li>
+        <li className={styles.noCookies}>
+          <div className={styles.noTracking}>v.{packageJson.version}</div>
+        </li>
       </ul>
     </footer>
   );

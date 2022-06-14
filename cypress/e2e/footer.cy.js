@@ -1,3 +1,5 @@
+const packageJson = require("../../package.json");
+
 describe("Footer", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -34,5 +36,9 @@ describe("Footer", () => {
       "li",
       "I don't track you in any way, hence no cookies or jam are used here."
     );
+  });
+
+  it("should contain version number", () => {
+    cy.get("[data-cy='footer']").contains("li", `v.${packageJson.version}`);
   });
 });
