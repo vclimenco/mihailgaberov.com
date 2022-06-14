@@ -28,15 +28,12 @@ describe("Home page", () => {
   });
 
   it("should be able to open a post via clicking at its title", () => {
-    cy.get("[data-cy='postTitle']").first().click();
+    cy.get("[data-cy='postTitle']").last().click();
     cy.wait(6000);
-    cy.url().should(
-      "include",
-      "/build-a-real-time-order-book-application-with-react-and-websockets"
-    );
+    cy.url().should("include", "/creating-a-twitter-bot-at-5am");
   });
 
-  it("should be able to open a post via clicking at Read Post liknk", () => {
+  it("should be able to open a post via clicking at Read Post link", () => {
     cy.get("[data-cy='readPostLink']").last().click();
     cy.wait(6000);
     cy.url().should("include", "/creating-a-twitter-bot-at-5am");
