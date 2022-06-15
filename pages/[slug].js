@@ -159,7 +159,7 @@ const renderBlock = (block) => {
     case "bookmark":
       return (
         <div className={styles.bookmark}>
-          <a href={value.url}>{value.caption[0].plain_text}</a>
+          <a href={value.url}>{value.caption[0]?.plain_text}</a>
         </div>
       );
     default:
