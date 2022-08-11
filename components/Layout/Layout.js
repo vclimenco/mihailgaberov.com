@@ -40,13 +40,6 @@ export const Layout = ({ children }) => {
   return (
     <>
       {show && <WalkingMan />}
-      {/* <span
-        id="progress-bar"
-        style={{
-          transform: `translateX(${completion - 100}%)`,
-        }}
-        className={styles.progressBar}
-      /> */}
       <Header />
       <main className={styles.container}>
         <Navigation />
