@@ -9,6 +9,7 @@ body {
   --purewhite: hsl(0, 0%, 100%);
   --pureblack: hsl(0, 0%, 0%);
   --neutralgrey: hsl(0, 0%, 66%);
+  --high-contrast-dark: hsl(0, 0%, 26%);
   padding: 0;
   margin: 0;
   --siteWidth: 83ch;
@@ -40,7 +41,7 @@ body {
   --background-alt: hsl(200, 65%, 68%);
   --foreground: var(--purewhite);
   --accent: hsl(75, 100%, 45%);
-  --header-foreground: hsl(278, 54%, 45%);
+  --header-foreground: hsl(0, 90%, 12%);
   --header-background: hsl(75, 100%, 45%);
   --footer-foreground: var(--background);
   --footer-background: var(--purewhite);
