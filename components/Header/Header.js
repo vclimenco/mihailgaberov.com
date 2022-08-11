@@ -59,11 +59,13 @@ export const Header = () => {
         <title>{packageJson.author}</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins"
-          rel="stylesheet"
+          rel="preload"
+          font-display="swap"
         ></link>
         <link
           href="https://fonts.googleapis.com/css?family=Glegoo"
-          rel="stylesheet"
+          rel="preload"
+          font-display="swap"
         ></link>
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
