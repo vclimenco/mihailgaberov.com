@@ -9,7 +9,7 @@ body {
   --purewhite: hsl(0, 0%, 100%);
   --pureblack: hsl(0, 0%, 0%);
   --neutralgrey: hsl(0, 0%, 66%);
-  --high-contrast-dark: hsl(0, 0%, 26%);
+
   padding: 0;
   margin: 0;
   --siteWidth: 83ch;
@@ -41,9 +41,10 @@ body {
   --background-alt: hsl(200, 65%, 68%);
   --foreground: var(--purewhite);
   --accent: hsl(75, 100%, 45%);
+  --high-contrast: hsl(0, 0%, 26%);
   --header-foreground: hsl(0, 90%, 12%);
   --header-background: hsl(75, 100%, 45%);
-  --footer-foreground: var(--background);
+  --footer-foreground: var(--high-contrast);
   --footer-background: var(--purewhite);
   --logo-emoji: "✍🏻";
 }
@@ -53,9 +54,10 @@ body {
   --background-alt: hsl(40, 1%, 55%);
   --foreground: hsl(0, 0%, 96%);
   --accent: hsl(192, 40%, 42%);
+  --high-contrast: hsl(39, 100%, 50%);
   --header-foreground: hsl(39, 100%, 50%);
   --header-background: hsla(181, 100%, 14%, 0.5);
-  --footer-foreground: var(--accent);
+  --footer-foreground: var(--high-contrast);
   --footer-background: hsl(181, 100%, 14%);
   --logo-emoji: "✍🏽";
 }

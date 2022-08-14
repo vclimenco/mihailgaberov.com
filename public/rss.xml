@@ -5,15 +5,23 @@
     <link>https://mihailgaberov.com</link>
     <description>Learning by sharing.</description>
     <language>en</language>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <atom:link href="https://mihailgaberov.com/rss.xml" rel="self" type="application/rss+xml"/>
     
+    <item>
+      <guid>https://mihailgaberov.com/posts/fb8a12e4-9631-48c0-91fe-9bfebec25e46</guid>
+      <title>How to Solve the Parking Lot Challenge in JavaScript</title>
+      <link>https://www.notion.so/How-to-Solve-the-Parking-Lot-Challenge-in-JavaScript-fb8a12e4963148c091fe9bfebec25e46</link>
+      <tags>javascript, react, animation, vite</tags>
+      <lastUpdatedDate>Mon, 11 Jul 2022 06:10:00 GMT</lastUpdatedDate>
+      <createdDate>Sat, 23 Apr 2022 11:15:00 GMT</createdDate>
+    </item>
     <item>
       <guid>https://mihailgaberov.com/posts/9de36174-bcab-4465-946c-9ff23f30ddda</guid>
       <title>Build a real-time Order Book application with React and WebSockets</title>
       <link>https://www.notion.so/Build-a-real-time-Order-Book-application-with-React-and-WebSockets-9de36174bcab4465946c9ff23f30ddda</link>
       <tags>orderbook, react, websockets</tags>
-      <lastUpdatedDate>Wed, 20 Apr 2022 11:58:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Tue, 14 Jun 2022 14:00:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 06 Jan 2022 09:07:00 GMT</createdDate>
     </item>
     <item>
@@ -21,7 +29,7 @@
       <title>How to Automate Simple Tasks with Node.js</title>
       <link>https://www.notion.so/How-to-Automate-Simple-Tasks-with-Node-js-63a0e4f839784a24b44928a555846218</link>
       <tags>automation, node</tags>
-      <lastUpdatedDate>Wed, 06 Apr 2022 13:54:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Mon, 20 Jun 2022 15:16:00 GMT</lastUpdatedDate>
       <createdDate>Wed, 06 Apr 2022 13:50:00 GMT</createdDate>
     </item>
     <item>
@@ -29,7 +37,7 @@
       <title>How to Build a SPA with Vue.js and C# Using .NET Core</title>
       <link>https://www.notion.so/How-to-Build-a-SPA-with-Vue-js-and-C-Using-NET-Core-6d6f4851a11c4fb6b95b40ed855f87a8</link>
       <tags>vue.js, C#, .net</tags>
-      <lastUpdatedDate>Fri, 15 Apr 2022 06:41:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Mon, 20 Jun 2022 15:13:00 GMT</lastUpdatedDate>
       <createdDate>Mon, 28 Mar 2022 07:14:00 GMT</createdDate>
     </item>
     <item>
@@ -37,7 +45,7 @@
       <title>How to create an air blowing effect with JavaScript</title>
       <link>https://www.notion.so/How-to-create-an-air-blowing-effect-with-JavaScript-a0c0512746654c9d9c5089e9b2fbcdbd</link>
       <tags>javascript, animation, blowing effect</tags>
-      <lastUpdatedDate>Sun, 20 Mar 2022 10:51:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 12:54:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:34:00 GMT</createdDate>
     </item>
     <item>
@@ -45,7 +53,7 @@
       <title>How to run Docker on Windows 10 Home edition</title>
       <link>https://www.notion.so/How-to-run-Docker-on-Windows-10-Home-edition-693e81990662428dbde7444d25e80157</link>
       <tags>docker, windows</tags>
-      <lastUpdatedDate>Mon, 28 Mar 2022 14:55:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 12:56:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:33:00 GMT</createdDate>
     </item>
     <item>
@@ -53,7 +61,7 @@
       <title>How I build a desktop chat app with CometChat and NW.js (and how you can too)</title>
       <link>https://www.notion.so/How-I-build-a-desktop-chat-app-with-CometChat-and-NW-js-and-how-you-can-too-0070a7608ec74de7819d5bedaab219db</link>
       <tags>desktop, chat, nw.js</tags>
-      <lastUpdatedDate>Mon, 28 Mar 2022 14:53:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:00:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:32:00 GMT</createdDate>
     </item>
     <item>
@@ -61,7 +69,7 @@
       <title>Optimize your JavaScript app by using service workers</title>
       <link>https://www.notion.so/Optimize-your-JavaScript-app-by-using-service-workers-c8016edb0af04ade8322f4ff9077ee2b</link>
       <tags>javascript, optimization, service workers</tags>
-      <lastUpdatedDate>Thu, 10 Mar 2022 16:32:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:02:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:31:00 GMT</createdDate>
     </item>
     <item>
@@ -69,7 +77,7 @@
       <title>Visualize Pancakes Algorithm with React and Popmotion.io</title>
       <link>https://www.notion.so/Visualize-Pancakes-Algorithm-with-React-and-Popmotion-io-ccead0f88b9346f789c3cfad63f4722c</link>
       <tags>react, algorithms, animation</tags>
-      <lastUpdatedDate>Thu, 10 Mar 2022 16:31:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:03:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:30:00 GMT</createdDate>
     </item>
     <item>
@@ -77,7 +85,7 @@
       <title>Build a chat app with React, TypeScript and Socket.io</title>
       <link>https://www.notion.so/Build-a-chat-app-with-React-TypeScript-and-Socket-io-4c0ab6a3e3054be195357610f6fdf4fe</link>
       <tags>react, typescript, chat, testing, hooks</tags>
-      <lastUpdatedDate>Wed, 06 Apr 2022 06:18:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 10 Aug 2022 07:41:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:23:00 GMT</createdDate>
     </item>
     <item>
@@ -85,7 +93,7 @@
       <title>How to optimize your JavaScript apps using Loops</title>
       <link>https://www.notion.so/How-to-optimize-your-JavaScript-apps-using-Loops-d392395f1e4d48dca7f7af76d3988efc</link>
       <tags>javascript, optimization</tags>
-      <lastUpdatedDate>Mon, 28 Mar 2022 14:49:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:05:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:29:00 GMT</createdDate>
     </item>
     <item>
@@ -93,7 +101,7 @@
       <title>React Hooks: Revisited</title>
       <link>https://www.notion.so/React-Hooks-Revisited-36c260270e3348d2adaa3a721f83abc9</link>
       <tags>react, hooks</tags>
-      <lastUpdatedDate>Thu, 10 Mar 2022 16:28:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:06:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:27:00 GMT</createdDate>
     </item>
     <item>
@@ -101,7 +109,7 @@
       <title>How to solve the Sherlock and Anagrams coding challenge in JavaScript</title>
       <link>https://www.notion.so/How-to-solve-the-Sherlock-and-Anagrams-coding-challenge-in-JavaScript-04af58ea194f4cacbbc00571843b52b9</link>
       <tags>javascript, algorithms, anagrams</tags>
-      <lastUpdatedDate>Sun, 13 Mar 2022 10:52:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:08:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 16:26:00 GMT</createdDate>
     </item>
     <item>
@@ -109,7 +117,7 @@
       <title>What should we test (ReactJS Components)</title>
       <link>https://www.notion.so/What-should-we-test-ReactJS-Components-71c9270779f84d57a72070d5dfbdffa2</link>
       <tags>react, javascript, testing</tags>
-      <lastUpdatedDate>Thu, 10 Mar 2022 07:40:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:10:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 07:39:00 GMT</createdDate>
     </item>
     <item>
@@ -117,7 +125,7 @@
       <title>Improve your Twitter bot with MongoDB</title>
       <link>https://www.notion.so/Improve-your-Twitter-bot-with-MongoDB-ae0a62a5c93143959742dac71a65823b</link>
       <tags>twitter, javascript, mondodb</tags>
-      <lastUpdatedDate>Mon, 28 Mar 2022 14:46:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:12:00 GMT</lastUpdatedDate>
       <createdDate>Thu, 10 Mar 2022 07:36:00 GMT</createdDate>
     </item>
     <item>
@@ -125,7 +133,7 @@
       <title>Creating a Twitter bot at 5am</title>
       <link>https://www.notion.so/Creating-a-Twitter-bot-at-5am-a5d56f6dd7d64ef3b6b8af8fab662750</link>
       <tags>twitter, websockets, javascript</tags>
-      <lastUpdatedDate>Mon, 28 Mar 2022 14:40:00 GMT</lastUpdatedDate>
+      <lastUpdatedDate>Wed, 22 Jun 2022 13:15:00 GMT</lastUpdatedDate>
       <createdDate>Wed, 09 Mar 2022 12:15:00 GMT</createdDate>
     </item>
   </channel>
